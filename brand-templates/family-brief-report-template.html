@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>The Family Brief — Blank Template</title>
+<style>
+/* =========================================================
+   YOUR FAMILY BRIEF — Report Design Tokens
+   Palette: Linen / Espresso / Deep Rose / Warm Taupe
+   Fonts: Cormorant Garamond + Jost (sandbox stand-ins:
+   TeX Gyre Pagella italic + TeX Gyre Adventor)
+   ========================================================= */
+:root{
+  --linen:    #FAF5F2;
+  --espresso: #3C2E30;
+  --rose:     #9E5C6B;
+  --taupe:    #C4B5A8;
+  --white:    #FFFFFF;
+
+  --ink:      var(--espresso);
+  --ink-soft: rgba(60,46,48,.78);
+  --muted:    #A08F80;
+  --rule:     rgba(196,181,168,.55);
+  --rule-soft:rgba(196,181,168,.35);
+
+  --serif: 'TeX Gyre Pagella', 'Cormorant Garamond', Georgia, serif;
+  --sans:  'TeX Gyre Adventor', 'Jost', 'Century Gothic', sans-serif;
+
+  --pad-x: 130px;
+  --pad-top: 120px;
+  --pad-bottom: 130px;
+}
+
+@page{ size: 1920px 1080px; margin: 0; }
+*{ box-sizing: border-box; }
+html,body{ margin:0; padding:0; }
+
+.slide{
+  position: relative;
+  width: 1920px; height: 1080px;
+  background: var(--linen);
+  color: var(--ink);
+  font-family: var(--sans);
+  overflow: hidden;
+  page-break-after: always;
+}
+
+/* double taupe hairline frame */
+.frame-outer, .frame-inner{ position:absolute; border:1.5px solid var(--taupe); pointer-events:none; }
+.frame-outer{ inset: 30px; }
+.frame-inner{ inset: 40px; border-color: var(--rule); }
+
+.pad{
+  position:absolute; inset:0;
+  padding: var(--pad-top) var(--pad-x) var(--pad-bottom);
+  display:flex; flex-direction:column;
+}
+
+/* wordmark + footer chrome */
+.wordmark{
+  position:absolute; top:64px; left:0; right:0;
+  text-align:center;
+  font-family:var(--sans); font-size:21px; letter-spacing:.42em;
+  color:var(--rose); text-transform:uppercase;
+}
+.footer{
+  position:absolute; left:var(--pad-x); right:var(--pad-x); bottom:62px;
+  border-top:1px solid var(--rule);
+  padding-top:18px;
+  display:flex; justify-content:space-between;
+  font-size:18px; letter-spacing:.28em; text-transform:uppercase; color:var(--rose);
+}
+.footer .pg{ color:var(--muted); letter-spacing:.18em; }
+
+/* headings */
+.eyebrow{
+  font-family:var(--sans); font-size:21px; letter-spacing:.3em;
+  text-transform:uppercase; color:var(--rose);
+}
+.title{
+  font-family:var(--serif); font-style:italic; font-weight:400;
+  font-size:78px; line-height:1.02; color:var(--ink);
+  margin:18px 0 0;
+}
+.lead{ font-size:30px; line-height:1.45; color:var(--ink-soft); max-width:1200px; }
+
+/* botanical sprig divider */
+.sprig{ margin-top:26px; }
+
+/* cards */
+.card{
+  background:var(--white); border:1px solid var(--rule);
+  padding:36px 40px; display:flex; flex-direction:column;
+}
+.card.rose{ background:var(--rose); border-color:var(--rose); color:var(--linen); }
+
+.label{
+  font-size:19px; letter-spacing:.24em; text-transform:uppercase; color:var(--muted);
+}
+
+/* fill-in guides (blank template) */
+.fill{
+  display:inline-block; min-width:200px; min-height:.8em;
+  border-bottom:2px dashed var(--taupe); vertical-align:baseline;
+}
+.fill.wide{ min-width:420px; }
+.fill-block{
+  display:block; min-height:1.1em; width:90%;
+  border-bottom:2px dashed var(--taupe); margin-top:14px;
+}
+.fill-block + .fill-block{ margin-top:26px; }
+.rose .fill, .rose .fill-block{ border-bottom-color: rgba(250,245,242,.6); }
+
+/* ============ 01 COVER ============ */
+.cover .pad{ justify-content:center; align-items:center; text-align:center; }
+.cover .kicker{
+  font-size:22px; letter-spacing:.34em; text-transform:uppercase; color:var(--muted);
+}
+.cover .display{
+  font-family:var(--serif); font-style:italic; font-weight:400;
+  font-size:150px; line-height:1.0; color:var(--ink); margin:30px 0 0;
+}
+.cover .display .accent{ color:var(--rose); }
+.cover .sub{ font-size:32px; color:var(--ink-soft); margin-top:44px; }
+.cover .metarow{
+  position:absolute; left:var(--pad-x); right:var(--pad-x); bottom:115px;
+  display:flex; justify-content:center; border-top:1px solid var(--rule); padding-top:34px;
+}
+.cover .metarow > div{ width:420px; text-align:center; }
+.cover .metarow .k{ font-size:18px; letter-spacing:.26em; text-transform:uppercase; color:var(--rose); margin-bottom:14px; }
+.cover .metarow .v{ font-family:var(--serif); font-size:30px; color:var(--ink); min-height:1.1em; }
+.cover .metarow .v.fill{ min-width:300px; }
+
+/* ============ 02 SUMMARY ============ */
+.sum-grid{ display:flex; gap:34px; flex:1; margin-top:48px; }
+.sum-left{ flex:1.25; display:flex; flex-direction:column; gap:34px; }
+.sum-left .card{ flex:1; justify-content:center; }
+.sum-ttl{
+  font-family:var(--serif); font-style:italic; font-size:38px; color:var(--rose); margin-bottom:16px;
+}
+.sum-txt{ font-size:26px; line-height:1.55; color:var(--ink-soft); }
+.sum-right{ flex:1; display:flex; flex-direction:column; gap:34px; }
+.hero-stat{ flex:1.6; justify-content:center; text-align:center; }
+.hero-stat .big{ font-family:var(--serif); font-size:170px; line-height:.9; color:var(--linen); }
+.hero-stat .big.fill{ min-height:130px; min-width:260px; margin:0 auto; }
+.hero-stat .cap{ font-size:26px; color:var(--linen); margin-top:22px; }
+.focus-card{ flex:1; justify-content:center; text-align:center; }
+.focus-card .val{ font-family:var(--serif); font-style:italic; font-size:42px; color:var(--ink); margin-top:16px; }
+
+/* ============ 03 MATRIX ============ */
+.matrix-wrap{ display:flex; gap:22px; flex:1; margin-top:48px; }
+.ylab{ display:flex; flex-direction:column; justify-content:space-between; align-items:center; width:48px; padding:150px 0 190px; }
+.ylab span{ font-size:18px; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); transform:rotate(-90deg); white-space:nowrap; width:48px; }
+.matrix-col{ flex:1; display:flex; flex-direction:column; gap:18px; }
+.matrix{ flex:1; display:flex; flex-direction:column; gap:22px; }
+.mrow{ flex:1; display:flex; gap:22px; }
+.quad{
+  flex:1;
+  background:var(--white); border:1px solid var(--rule);
+  padding:32px 36px; display:flex; flex-direction:column; justify-content:space-between;
+}
+.quad .qname{ font-family:var(--serif); font-style:italic; font-size:40px; color:var(--ink); }
+.quad .qnote{ font-size:22px; color:var(--muted); line-height:1.45; }
+.quad.qw{ background:var(--rose); border-color:var(--rose); }
+.quad.qw .qname{ color:var(--linen); font-size:46px; }
+.quad.qw .qnote{ color:var(--linen); }
+.qw-dots{ display:flex; gap:12px; margin-top:8px; }
+.qw-dots span{
+  width:44px; height:44px; border-radius:999px;
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(250,245,242,.22); color:var(--linen);
+  font-family:var(--serif); font-size:24px;
+}
+.xlab{ display:flex; justify-content:space-between; font-size:18px; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); }
+
+/* ============ 04 QUICK WINS ============ */
+.qwlist{ margin-top:44px; flex:1; display:flex; flex-direction:column; justify-content:center; }
+.qwrow{
+  display:flex; align-items:center; gap:30px;
+  padding:26px 0; border-top:1px solid var(--rule);
+}
+.qwrow:last-child{ border-bottom:1px solid var(--rule); }
+.qwrow .n{ font-family:var(--serif); font-style:italic; font-size:40px; color:var(--rose); width:70px; flex:none; }
+.qwrow .pain{ font-size:26px; color:var(--ink); flex:1; }
+.qwrow .arrow{ font-size:32px; color:var(--rose); flex:none; }
+.qwrow .fix{ font-size:26px; color:var(--ink-soft); flex:1.05; }
+.qwrow .pain.fill, .qwrow .fix.fill{ min-height:.9em; }
+
+/* ============ 05 RECOMMENDATIONS ============ */
+.sol-grid{ display:flex; flex-wrap:wrap; gap:26px; flex:1; margin-top:44px; }
+.sol{
+  width:calc(33.333% - 18px); height:calc(50% - 13px);
+  background:var(--white); border:1px solid var(--rule);
+  padding:30px 34px; display:flex; flex-direction:column;
+}
+.sol .top{ display:flex; align-items:baseline; gap:16px; }
+.sol .n{ font-family:var(--serif); font-style:italic; font-size:34px; color:var(--rose); }
+.sol .tool{ font-family:var(--serif); font-size:32px; color:var(--ink); }
+.sol .use{ font-size:21px; color:var(--ink-soft); margin:14px 0 auto; line-height:1.45; }
+.sol .meta{ border-top:1px solid var(--rule); padding-top:16px; margin-top:16px; }
+.sol .meta > div{ display:flex; justify-content:space-between; align-items:baseline; gap:18px; padding:5px 0; }
+.sol .meta .mk{ font-size:18px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+.sol .meta .mv{ font-family:var(--serif); font-size:24px; color:var(--ink); white-space:nowrap; }
+.sol .meta .mv.save{ color:var(--rose); }
+.sol .meta .mv.fill{ min-width:120px; }
+.sol .tool.fill{ min-width:220px; }
+
+/* ============ 06 FIRST WEEK ============ */
+.plan-grid{ display:flex; gap:28px; flex:1; margin-top:48px; }
+.day{
+  flex:1; background:var(--white); border:1px solid var(--rule);
+  padding:38px 36px; display:flex; flex-direction:column;
+}
+.day .dn{ font-family:var(--serif); font-style:italic; font-size:96px; line-height:.9; color:var(--rose); }
+.day .dl{ font-size:21px; letter-spacing:.26em; text-transform:uppercase; color:var(--ink); margin-top:14px; }
+.day .task{ font-size:24px; line-height:1.5; color:var(--ink-soft); margin-top:24px; }
+.day .toolrow{ margin-top:auto; padding-top:24px; border-top:1px solid var(--rule); font-size:18px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+.day .toolrow b{ color:var(--rose); font-weight:normal; font-family:var(--serif); font-size:22px; letter-spacing:.02em; text-transform:none; }
+.day .toolrow b.fill{ min-width:140px; }
+
+/* ============ 07 WHAT COMES NEXT ============ */
+.after-grid{ display:flex; gap:40px; flex:1; margin-top:48px; }
+.after{ flex:1; display:flex; flex-direction:column; justify-content:center; }
+.after .n{ font-family:var(--serif); font-style:italic; font-size:110px; line-height:.85; color:var(--rose); }
+.after .arule{ width:64px; height:1.5px; background:var(--taupe); margin:30px 0; }
+.after .txt{ font-family:var(--serif); font-size:38px; line-height:1.3; color:var(--ink); }
+.after .when{ font-size:19px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-top:22px; }
+
+/* ============ 08 PAYOFF ============ */
+.fin-grid{ display:flex; gap:34px; flex:1; margin-top:48px; }
+.fin-hero{ flex:1.35; justify-content:center; text-align:center; }
+.fin-hero .label{ color:rgba(250,245,242,.85); }
+.fin-hero .big{ font-family:var(--serif); font-size:180px; line-height:.9; color:var(--linen); margin-top:20px; }
+.fin-hero .big.fill{ min-height:135px; min-width:300px; margin:20px auto 0; }
+.fin-hero .cap{ font-size:25px; color:var(--linen); margin-top:26px; }
+.fin-side{ flex:1; display:flex; flex-direction:column; gap:34px; }
+.fin-card{ flex:1; justify-content:center; text-align:center; }
+.fin-card .big{ font-family:var(--serif); font-size:100px; line-height:.9; color:var(--ink); margin-top:16px; }
+.fin-card .big.fill{ min-height:80px; min-width:220px; margin:16px auto 0; }
+.fin-card .cap{ font-size:20px; color:var(--muted); margin-top:18px; }
+
+/* ============ 09 NEXT STEPS ============ */
+.steps{ display:flex; flex-direction:column; gap:44px; margin-top:56px; flex:1; justify-content:center; max-width:1380px; }
+.step{ display:flex; gap:40px; align-items:flex-start; }
+.step .sn{ font-family:var(--serif); font-style:italic; font-size:90px; line-height:.85; color:var(--rose); width:100px; flex:none; }
+.step .sh{ font-family:var(--serif); font-style:italic; font-size:44px; color:var(--ink); }
+.step .sd{ font-size:26px; color:var(--ink-soft); margin-top:14px; line-height:1.5; max-width:1020px; }
+.step .sh.fill-block, .step .sd.fill-block{ width:80%; }
+.cta{
+  display:inline-block; margin-top:22px;
+  background:var(--rose); color:var(--linen);
+  padding:24px 46px; font-size:24px; letter-spacing:.22em; text-transform:uppercase;
+}
+</style>
+</head>
+<body>
+
+<!-- 01 COVER -->
+<div class="slide cover">
+  <div class="frame-outer"></div><div class="frame-inner"></div>
+  <div class="wordmark">Your Family Brief</div>
+  <div class="pad">
+    <div class="kicker">A Family Advisory Session Report</div>
+    <h1 class="display">The Family<br><span class="accent">Brief</span></h1>
+    <svg class="sprig" width="160" height="34" viewBox="0 0 160 34" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#9E5C6B" stroke-width="1.6">
+        <path d="M10 17 H150"/>
+        <path d="M80 17 C 74 8, 66 6, 58 8 C 64 14, 72 16, 80 17 Z" fill="#9E5C6B" stroke="none"/>
+        <path d="M80 17 C 86 8, 94 6, 102 8 C 96 14, 88 16, 80 17 Z" fill="#9E5C6B" stroke="none"/>
+        <circle cx="80" cy="17" r="3.4" fill="#FAF5F2" stroke="#9E5C6B"/>
+      </g>
+    </svg>
+    <p class="sub">Prepared with care for <span class="fill wide">&nbsp;</span></p>
+  </div>
+  <div class="metarow">
+    <div><div class="k">Session Date</div><div class="v fill">&nbsp;</div></div>
+    <div><div class="k">Your Family</div><div class="v fill">&nbsp;</div></div>
+    <div><div class="k">Primary Focus</div><div class="v fill">&nbsp;</div></div>
+  </div>
+</div>
+
+<!-- 02 EXECUTIVE SUMMARY -->
+<div class="slide">
+  <div class="frame-outer"></div><div class="frame-inner"></div>
+  <div class="wordmark">Your Family Brief</div>
+  <div class="pad">
+    <div>
+      <div class="eyebrow">Where you are · where you're headed</div>
+      <h2 class="title">What We Heard</h2>
+    </div>
+    <div class="sum-grid">
+      <div class="sum-left">
+        <div class="card">
+          <div class="sum-ttl">The Friction</div>
+          <div class="sum-txt fill-block">&nbsp;</div>
+          <div class="sum-txt fill-block">&nbsp;</div>
+        </div>
+        <div class="card">
+          <div class="sum-ttl">The Family You're Building</div>
+          <div class="sum-txt fill-block">&nbsp;</div>
+          <div class="sum-txt fill-block">&nbsp;</div>
+        </div>
+      </div>
+      <div class="sum-right">
+        <div class="card rose hero-stat">
+          <div class="big fill">&nbsp;</div>
+          <div class="cap">Hours back in your week, together</div>
+        </div>
+        <div class="card focus-card">
+          <div class="label">Our Focus</div>
+          <div class="val fill">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Your Family Brief</span><span class="pg">02 · 09</span></div>
+</div>
+
+<!-- 03 IMPACT–EFFORT MATRIX -->
+<div class="slide">
+  <div class="frame-outer"></div><div class="frame-inner"></div>
+  <div class="wordmark">Your Family Brief</div>
+  <div class="pad">
+    <div>
+      <div class="eyebrow">Where the relief is</div>
+      <h2 class="title">First Things First</h2>
+    </div>
+    <div class="matrix-wrap">
+      <div class="ylab"><span>More Relief</span><span>Less Relief</span></div>
+      <div class="matrix-col">
+        <div class="matrix">
+          <div class="mrow">
+            <div class="quad qw">
+              <div class="qname">Quick Wins</div>
+              <div class="qw-dots"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div>
+              <div class="qnote">Big relief, small lift — this brief begins here.</div>
+            </div>
+            <div class="quad">
+              <div class="qname">Worth the Work</div>
+              <div class="qnote">Big relief, bigger lift — we'll phase these in once the wins are humming.</div>
+            </div>
+          </div>
+          <div class="mrow">
+            <div class="quad">
+              <div class="qname">Someday Niceties</div>
+              <div class="qnote">Small relief, small lift — lovely when a quiet moment allows.</div>
+            </div>
+            <div class="quad">
+              <div class="qname">Let These Go</div>
+              <div class="qnote">Small relief, real effort — permission granted to skip them.</div>
+            </div>
+          </div>
+        </div>
+        <div class="xlab"><span>Less Effort</span><span>Effort</span><span>More Effort</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Your Family Brief</span><span class="pg">03 · 09</span></div>
+</div>
+
+<!-- 04 QUICK WINS -->
+<div class="slide">
+  <div class="frame-outer"></div><div class="frame-inner"></div>
+  <div class="wordmark">Your Family Brief</div>
+  <div class="pad">
+    <div>
+      <div class="eyebrow">Big relief, small lift</div>
+      <h2 class="title">Your Quick Wins</h2>
+    </div>
+    <div class="qwlist">
+      <div class="qwrow"><span class="n">01</span><span class="pain fill">&nbsp;</span><span class="arrow">→</span><span class="fix fill">&nbsp;</span></div>
+      <div class="qwrow"><span class="n">02</span><span class="pain fill">&nbsp;</span><span class="arrow">→</span><span class="fix fill">&nbsp;</span></div>
+      <div class="qwrow"><span class="n">03</span><span class="pain fill">&nbsp;</span><span class="arrow">→</span><span class="fix fill">&nbsp;</span></div>
+      <div class="qwrow"><span class="n">04</span><span class="pain fill">&nbsp;</span><span class="arrow">→</span><span class="fix fill">&nbsp;</span></div>
+      <div class="qwrow"><span class="n">05</span><span class="pain fill">&nbsp;</span><span class="arrow">→</span><span class="fix fill">&nbsp;</span></div>
+      <div class="qwrow"><span class="n">06</span><span class="pain fill">&nbsp;</span><span class="arrow">→</span><span class="fix fill">&nbsp;</span></div>
+    </div>
+  </div>
+  <div class="footer"><span>Your Family Brief</span><span class="pg">04 · 09</span></div>
+</div>
+
+<!-- 05 WHAT WE RECOMMEND -->
+<div class="slide">
+  <div class="frame-outer"></div><div class="frame-inner"></div>
+  <div class="wordmark">Your Family Brief</div>
+  <div class="pad">
+    <div>
+      <div class="eyebrow">Tools &amp; rhythms for your household</div>
+      <h2 class="title">What We Recommend</h2>
+    </div>
+    <div class="sol-grid">
+      <div class="sol">
+        <div class="top"><span class="n">01</span><span class="tool fill">&nbsp;</span></div>
+        <div class="use fill-block">&nbsp;</div>
+        <div class="meta">
+          <div><span class="mk">Cost</span><span class="mv fill">&nbsp;</span></div>
+          <div><span class="mk">Setup</span><span class="mv fill">&nbsp;</span></div>
+          <div><span class="mk">Gives back</span><span class="mv save fill">&nbsp;</span></div>
+        </div>
+      </div>
+      <div class="sol">
+        <div class="top"><span class="n">02</span><span class="tool fill">&nbsp;</span></div>
+        <div class="use fill-block">&nbsp;</div>
+        <div class="meta">
+          <div><span class="mk">Cost</span><span class="mv fill">&nbsp;</span></div>
+          <div><span class="mk">Setup</span><span class="mv fill">&nbsp;</span></div>
+          <div><span class="mk">Gives back</span><span class="mv save fill">&nbsp;</span></div>
+        </div>
+      </div>
+      <div class="sol">
+        <div class="top"><span class="n">03</span><span class="tool fill">&nbsp;</span></div>
+        <div class="use fill-block">&nbsp;</div>
+        <div class="meta">
+          <div><span class="mk">Cost</span><span class="mv fill">&nbsp;</span></div>
+          <div><span class="mk">Setup</span><span class="mv fill">&nbsp;</span></div>
+          <div><span class="mk">Gives back</span><span class="mv save fill">&nbsp;</span></div>
+        </div>
+      </div>
+      <div class="sol">
+        <div class="top"><span class="n">04</span><span class="tool fill">&nbsp;</span></div>
+        <div class="use fill-block">&nbsp;</div>
+        <div class="meta">
+          <div><span class="mk">Cost</span><span class="mv fill">&nbsp;</span></div>
+          <div><span class="mk">Setup</span><span class="mv fill">&nbsp;</span></div>
+          <div><span class="mk">Gives back</span><span class="mv save fill">&nbsp;</span></div>
+        </div>
+      </div>
+      <div class="sol">
+        <div class="top"><span class="n">05</span><span class="tool fill">&nbsp;</span></div>
+        <div class="use fill-block">&nbsp;</div>
+        <div class="meta">
+          <div><span class="mk">Cost</span><span class="mv fill">&nbsp;</span></div>
+          <div><span class="mk">Setup</span><span class="mv fill">&nbsp;</span></div>
+          <div><span class="mk">Gives back</span><span class="mv save fill">&nbsp;</span></div>
+        </div>
+      </div>
+      <div class="sol">
+        <div class="top"><span class="n">06</span><span class="tool fill">&nbsp;</span></div>
+        <div class="use fill-block">&nbsp;</div>
+        <div class="meta">
+          <div><span class="mk">Cost</span><span class="mv fill">&nbsp;</span></div>
+          <div><span class="mk">Setup</span><span class="mv fill">&nbsp;</span></div>
+          <div><span class="mk">Gives back</span><span class="mv save fill">&nbsp;</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Your Family Brief</span><span class="pg">05 · 09</span></div>
+</div>
+
+<!-- 06 YOUR FIRST WEEK -->
+<div class="slide">
+  <div class="frame-outer"></div><div class="frame-inner"></div>
+  <div class="wordmark">Your Family Brief</div>
+  <div class="pad">
+    <div>
+      <div class="eyebrow">Gentle start, real momentum</div>
+      <h2 class="title">Your First Week</h2>
+    </div>
+    <div class="plan-grid">
+      <div class="day">
+        <div class="dn">1</div><div class="dl">Day One</div>
+        <div class="task fill-block">&nbsp;</div>
+        <div class="toolrow">With · <b class="fill">&nbsp;</b></div>
+      </div>
+      <div class="day">
+        <div class="dn">2</div><div class="dl">Day Two</div>
+        <div class="task fill-block">&nbsp;</div>
+        <div class="toolrow">With · <b class="fill">&nbsp;</b></div>
+      </div>
+      <div class="day">
+        <div class="dn">3</div><div class="dl">Day Three</div>
+        <div class="task fill-block">&nbsp;</div>
+        <div class="toolrow">With · <b class="fill">&nbsp;</b></div>
+      </div>
+      <div class="day">
+        <div class="dn">4</div><div class="dl">Day Four</div>
+        <div class="task fill-block">&nbsp;</div>
+        <div class="toolrow">With · <b class="fill">&nbsp;</b></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Your Family Brief</span><span class="pg">06 · 09</span></div>
+</div>
+
+<!-- 07 WHAT COMES NEXT -->
+<div class="slide">
+  <div class="frame-outer"></div><div class="frame-inner"></div>
+  <div class="wordmark">Your Family Brief</div>
+  <div class="pad">
+    <div>
+      <div class="eyebrow">Once the quick wins are humming</div>
+      <h2 class="title">What Comes Next</h2>
+    </div>
+    <div class="after-grid">
+      <div class="after">
+        <div class="n">01</div><div class="arule"></div>
+        <div class="txt fill-block">&nbsp;</div>
+        <div class="when fill">&nbsp;</div>
+      </div>
+      <div class="after">
+        <div class="n">02</div><div class="arule"></div>
+        <div class="txt fill-block">&nbsp;</div>
+        <div class="when fill">&nbsp;</div>
+      </div>
+      <div class="after">
+        <div class="n">03</div><div class="arule"></div>
+        <div class="txt fill-block">&nbsp;</div>
+        <div class="when fill">&nbsp;</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Your Family Brief</span><span class="pg">07 · 09</span></div>
+</div>
+
+<!-- 08 WHAT YOU GET BACK -->
+<div class="slide">
+  <div class="frame-outer"></div><div class="frame-inner"></div>
+  <div class="wordmark">Your Family Brief</div>
+  <div class="pad">
+    <div>
+      <div class="eyebrow">The part that matters</div>
+      <h2 class="title">What You Get Back</h2>
+    </div>
+    <div class="fin-grid">
+      <div class="card rose fin-hero">
+        <div class="label">Time Returned, Each Week</div>
+        <div class="big fill">&nbsp;</div>
+        <div class="cap fill-block" style="margin:26px auto 0; width:70%;">&nbsp;</div>
+      </div>
+      <div class="fin-side">
+        <div class="card fin-card">
+          <div class="label">Monthly Cost of New Tools</div>
+          <div class="big fill">&nbsp;</div>
+          <div class="cap fill-block" style="margin:18px auto 0; width:70%;">&nbsp;</div>
+        </div>
+        <div class="card fin-card">
+          <div class="label">Worth It Because</div>
+          <div class="cap fill-block" style="margin:24px auto 0; width:80%;">&nbsp;</div>
+          <div class="cap fill-block" style="margin:24px auto 0; width:80%;">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Your Family Brief</span><span class="pg">08 · 09</span></div>
+</div>
+
+<!-- 09 YOUR NEXT STEPS -->
+<div class="slide">
+  <div class="frame-outer"></div><div class="frame-inner"></div>
+  <div class="wordmark">Your Family Brief</div>
+  <div class="pad">
+    <div>
+      <div class="eyebrow">Keeping the momentum, gently</div>
+      <h2 class="title">Your Next Steps</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="sn">1</div>
+        <div style="flex:1;">
+          <div class="sh fill-block">&nbsp;</div>
+          <div class="sd fill-block">&nbsp;</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="sn">2</div>
+        <div style="flex:1;">
+          <div class="sh fill-block">&nbsp;</div>
+          <div class="sd fill-block">&nbsp;</div>
+          <span class="cta">Book Your Follow-Up Session →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Your Family Brief</span><span class="pg">09 · 09</span></div>
+</div>
+
+</body></html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank you — Your Family Brief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #FAF5F2;
+      --blush:      #F2DDD8;
+      --dusty-rose: #D4A8A0;
+      --deep-rose:  #9E5C6B;
+      --taupe:      #C4B5A8;
+      --espresso:   #3C2E30;
+      --text:       #3C2E30;
+      --muted:      #7A6060;
+      --border:     #E8D8D2;
+    }
+
+    html, body { height: 100%; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 245, 242, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      min-height: 64px;
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--espresso);
+      letter-spacing: 0.01em;
+      text-decoration: none;
+    }
+
+    .nav-logo span { color: var(--deep-rose); }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 2rem;
+    }
+
+    .content {
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .check-mark {
+      width: 56px;
+      height: 56px;
+      background: var(--blush);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem;
+      font-size: 1.5rem;
+    }
+
+    .label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dusty-rose);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 400;
+      color: var(--espresso);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .intro {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .note {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+      text-align: left;
+      margin-bottom: 2.5rem;
+    }
+
+    .note strong {
+      color: var(--espresso);
+      font-weight: 500;
+    }
+
+    .back-link {
+      font-size: 0.85rem;
+      color: var(--dusty-rose);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .back-link:hover { border-bottom-color: var(--dusty-rose); }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 2rem;
+      font-size: 0.8rem;
+      color: var(--taupe);
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--dusty-rose); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="/">Your Family<span> Brief</span></a>
+  </nav>
+
+  <main>
+    <div class="content">
+      <div class="check-mark">✓</div>
+      <p class="label">Form received</p>
+      <h1>You're all set.<br>See you on the call.</h1>
+      <p class="intro">That's exactly what I needed. Your answers will help me come prepared — the more context I have going in, the more useful your Brief will be coming out.</p>
+
+      <div class="note">
+        <strong>What happens next</strong><br><br>
+        You'll get a calendar confirmation with the Zoom link. Show up, talk through what's going on, and leave the rest to me. Your Family Brief will be in your inbox within 48 hours of our conversation.
+      </div>
+
+      <a class="back-link" href="/">← Back to Your Family Brief</a>
+    </div>
+  </main>
+
+  <footer>
+    Questions? Email <a href="mailto:admin@yourfamilybrief.com">admin@yourfamilybrief.com</a>
+  </footer>
+
+</body>
+</html>

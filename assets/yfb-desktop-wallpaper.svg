@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" overflow="hidden">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%"  stop-color="#FAF5F2"/>
+      <stop offset="55%" stop-color="#F2E8E4"/>
+      <stop offset="100%" stop-color="#EDD8D0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Atmospheric depth circles -->
+  <circle cx="150"  cy="170"  r="540" fill="#F2DDD8" fill-opacity="0.42"/>
+  <circle cx="1800" cy="930"  r="640" fill="#E8C5BC" fill-opacity="0.36"/>
+  <circle cx="1670" cy="70"   r="300" fill="#F2DDD8" fill-opacity="0.22"/>
+  <circle cx="250"  cy="990"  r="420" fill="#D4A8A0" fill-opacity="0.18"/>
+  <circle cx="960"  cy="540"  r="680" fill="#FAF5F2" fill-opacity="0.12"/>
+
+  <!-- LEFT BOTANICAL STEM -->
+  <path d="M 402,1085 C 388,875 428,715 408,555 C 388,395 362,268 354,95"
+        fill="none" stroke="#C4B5A8" stroke-width="1.8" stroke-opacity="0.55"/>
+
+  <!-- Left leaves — large lower -->
+  <g transform="translate(400,885)">
+    <path d="M 0,0 C 10,-15 16,-32 14,-52 C 12,-70 6,-82 0,-90 C -6,-82 -12,-70 -14,-52 C -16,-32 -10,-15 0,0 Z"
+          fill="#C4B5A8" fill-opacity="0.48" transform="rotate(-55)"/>
+    <path d="M 0,0 C 10,-15 16,-32 14,-52 C 12,-70 6,-82 0,-90 C -6,-82 -12,-70 -14,-52 C -16,-32 -10,-15 0,0 Z"
+          fill="#D4A8A0" fill-opacity="0.38" transform="rotate(52)"/>
+  </g>
+  <!-- y=745 -->
+  <g transform="translate(412,745)">
+    <path d="M 0,0 C 9,-13 14,-28 12,-46 C 10,-60 5,-70 0,-78 C -5,-70 -10,-60 -12,-46 C -14,-28 -9,-13 0,0 Z"
+          fill="#C4B5A8" fill-opacity="0.50" transform="rotate(-52)"/>
+    <path d="M 0,0 C 9,-13 14,-28 12,-46 C 10,-60 5,-70 0,-78 C -5,-70 -10,-60 -12,-46 C -14,-28 -9,-13 0,0 Z"
+          fill="#D4A8A0" fill-opacity="0.40" transform="rotate(55)"/>
+  </g>
+  <!-- y=610 -->
+  <g transform="translate(412,610)">
+    <path d="M 0,0 C 8,-11 12,-25 10,-40 C 9,-54 4,-62 0,-70 C -4,-62 -9,-54 -10,-40 C -12,-25 -8,-11 0,0 Z"
+          fill="#C4B5A8" fill-opacity="0.46" transform="rotate(-50)"/>
+    <path d="M 0,0 C 8,-11 12,-25 10,-40 C 9,-54 4,-62 0,-70 C -4,-62 -9,-54 -10,-40 C -12,-25 -8,-11 0,0 Z"
+          fill="#D4A8A0" fill-opacity="0.36" transform="rotate(52)"/>
+  </g>
+  <!-- y=480 -->
+  <g transform="translate(405,480)">
+    <path d="M 0,0 C 7,-10 11,-22 9,-36 C 8,-48 4,-56 0,-62 C -4,-56 -8,-48 -9,-36 C -11,-22 -7,-10 0,0 Z"
+          fill="#C4B5A8" fill-opacity="0.42" transform="rotate(-52)"/>
+    <path d="M 0,0 C 7,-10 11,-22 9,-36 C 8,-48 4,-56 0,-62 C -4,-56 -8,-48 -9,-36 C -11,-22 -7,-10 0,0 Z"
+          fill="#D4A8A0" fill-opacity="0.32" transform="rotate(50)"/>
+  </g>
+  <!-- y=350 -->
+  <g transform="translate(390,350)">
+    <path d="M 0,0 C 6,-9 10,-19 8,-31 C 7,-42 3,-50 0,-56 C -3,-50 -7,-42 -8,-31 C -10,-19 -6,-9 0,0 Z"
+          fill="#C4B5A8" fill-opacity="0.38" transform="rotate(-50)"/>
+    <path d="M 0,0 C 6,-9 10,-19 8,-31 C 7,-42 3,-50 0,-56 C -3,-50 -7,-42 -8,-31 C -10,-19 -6,-9 0,0 Z"
+          fill="#D4A8A0" fill-opacity="0.28" transform="rotate(53)"/>
+  </g>
+  <!-- y=215 -->
+  <g transform="translate(372,215)">
+    <path d="M 0,0 C 5,-7 8,-16 7,-26 C 6,-35 3,-41 0,-46 C -3,-41 -6,-35 -7,-26 C -8,-16 -5,-7 0,0 Z"
+          fill="#C4B5A8" fill-opacity="0.32" transform="rotate(-47)"/>
+    <path d="M 0,0 C 5,-7 8,-16 7,-26 C 6,-35 3,-41 0,-46 C -3,-41 -6,-35 -7,-26 C -8,-16 -5,-7 0,0 Z"
+          fill="#D4A8A0" fill-opacity="0.24" transform="rotate(50)"/>
+  </g>
+  <!-- Tip bud -->
+  <ellipse cx="358" cy="105" rx="5" ry="8" fill="#D4A8A0" fill-opacity="0.35"/>
+
+  <!-- LEFT accent sprigs (lighter, smaller) -->
+  <g transform="translate(310,540)">
+    <path d="M 0,0 C 4,-6 7,-14 6,-22 C 5,-30 2,-35 0,-38 C -2,-35 -5,-30 -6,-22 C -7,-14 -4,-6 0,0 Z"
+          fill="#D4A8A0" fill-opacity="0.22" transform="rotate(-30)"/>
+  </g>
+  <g transform="translate(470,420)">
+    <path d="M 0,0 C 4,-6 7,-14 6,-22 C 5,-30 2,-35 0,-38 C -2,-35 -5,-30 -6,-22 C -7,-14 -4,-6 0,0 Z"
+          fill="#C4B5A8" fill-opacity="0.20" transform="rotate(35)"/>
+  </g>
+
+  <!-- RIGHT BOTANICAL STEM -->
+  <path d="M 1538,1085 C 1552,878 1520,726 1534,572 C 1548,418 1557,285 1550,108"
+        fill="none" stroke="#C4B5A8" stroke-width="1.5" stroke-opacity="0.45"/>
+
+  <!-- Right leaves -->
+  <g transform="translate(1535,900)">
+    <path d="M 0,0 C 9,-13 14,-28 12,-46 C 10,-60 5,-70 0,-78 C -5,-70 -10,-60 -12,-46 C -14,-28 -9,-13 0,0 Z"
+          fill="#D4A8A0" fill-opacity="0.32" transform="rotate(54)"/>
+    <path d="M 0,0 C 9,-13 14,-28 12,-46 C 10,-60 5,-70 0,-78 C -5,-70 -10,-60 -12,-46 C -14,-28 -9,-13 0,0 Z"
+          fill="#C4B5A8" fill-opacity="0.38" transform="rotate(-50)"/>
+  </g>
+  <g transform="translate(1534,742)">
+    <path d="M 0,0 C 8,-11 12,-25 10,-40 C 9,-54 4,-62 0,-70 C -4,-62 -9,-54 -10,-40 C -12,-25 -8,-11 0,0 Z"
+          fill="#D4A8A0" fill-opacity="0.28" transform="rotate(52)"/>
+    <path d="M 0,0 C 8,-11 12,-25 10,-40 C 9,-54 4,-62 0,-70 C -4,-62 -9,-54 -10,-40 C -12,-25 -8,-11 0,0 Z"
+          fill="#C4B5A8" fill-opacity="0.34" transform="rotate(-48)"/>
+  </g>
+  <g transform="translate(1536,592)">
+    <path d="M 0,0 C 7,-10 11,-22 9,-36 C 8,-48 4,-56 0,-62 C -4,-56 -8,-48 -9,-36 C -11,-22 -7,-10 0,0 Z"
+          fill="#D4A8A0" fill-opacity="0.25" transform="rotate(50)"/>
+    <path d="M 0,0 C 7,-10 11,-22 9,-36 C 8,-48 4,-56 0,-62 C -4,-56 -8,-48 -9,-36 C -11,-22 -7,-10 0,0 Z"
+          fill="#C4B5A8" fill-opacity="0.30" transform="rotate(-52)"/>
+  </g>
+  <g transform="translate(1542,444)">
+    <path d="M 0,0 C 6,-9 10,-19 8,-31 C 7,-42 3,-50 0,-56 C -3,-50 -7,-42 -8,-31 C -10,-19 -6,-9 0,0 Z"
+          fill="#D4A8A0" fill-opacity="0.22" transform="rotate(48)"/>
+    <path d="M 0,0 C 6,-9 10,-19 8,-31 C 7,-42 3,-50 0,-56 C -3,-50 -7,-42 -8,-31 C -10,-19 -6,-9 0,0 Z"
+          fill="#C4B5A8" fill-opacity="0.26" transform="rotate(-55)"/>
+  </g>
+  <g transform="translate(1547,298)">
+    <path d="M 0,0 C 5,-7 8,-16 7,-26 C 6,-35 3,-41 0,-46 C -3,-41 -6,-35 -7,-26 C -8,-16 -5,-7 0,0 Z"
+          fill="#D4A8A0" fill-opacity="0.20" transform="rotate(50)"/>
+    <path d="M 0,0 C 5,-7 8,-16 7,-26 C 6,-35 3,-41 0,-46 C -3,-41 -6,-35 -7,-26 C -8,-16 -5,-7 0,0 Z"
+          fill="#C4B5A8" fill-opacity="0.24" transform="rotate(-48)"/>
+  </g>
+  <!-- Tip bud right -->
+  <ellipse cx="1551" cy="118" rx="4" ry="7" fill="#D4A8A0" fill-opacity="0.28"/>
+
+  <!-- RIGHT accent sprigs -->
+  <g transform="translate(1620,560)">
+    <path d="M 0,0 C 4,-6 7,-14 6,-22 C 5,-30 2,-35 0,-38 C -2,-35 -5,-30 -6,-22 C -7,-14 -4,-6 0,0 Z"
+          fill="#D4A8A0" fill-opacity="0.18" transform="rotate(28)"/>
+  </g>
+  <g transform="translate(1460,390)">
+    <path d="M 0,0 C 4,-6 7,-14 6,-22 C 5,-30 2,-35 0,-38 C -2,-35 -5,-30 -6,-22 C -7,-14 -4,-6 0,0 Z"
+          fill="#C4B5A8" fill-opacity="0.18" transform="rotate(-32)"/>
+  </g>
+
+  <!-- CENTER COMPOSITION -->
+  <!-- Top hairline -->
+  <line x1="648" y1="460" x2="1272" y2="460" stroke="#9E5C6B" stroke-width="0.6" stroke-opacity="0.28"/>
+  <circle cx="648"  cy="460" r="2.5" fill="#9E5C6B" fill-opacity="0.28"/>
+  <circle cx="1272" cy="460" r="2.5" fill="#9E5C6B" fill-opacity="0.28"/>
+
+  <!-- Wordmark -->
+  <text x="960" y="512"
+        font-family="Georgia,'Times New Roman',serif"
+        font-size="17" font-weight="normal"
+        fill="#9E5C6B" fill-opacity="0.72"
+        text-anchor="middle" letter-spacing="14">
+    YOUR FAMILY BRIEF
+  </text>
+
+  <!-- Tagline -->
+  <text x="960" y="582"
+        font-family="Georgia,'Times New Roman',serif"
+        font-size="46" font-style="italic" font-weight="normal"
+        fill="#3C2E30" fill-opacity="0.44"
+        text-anchor="middle" letter-spacing="0.5">
+    on family, clarity, and home
+  </text>
+
+  <!-- Bottom hairline -->
+  <line x1="648" y1="622" x2="1272" y2="622" stroke="#9E5C6B" stroke-width="0.6" stroke-opacity="0.28"/>
+  <circle cx="648"  cy="622" r="2.5" fill="#9E5C6B" fill-opacity="0.28"/>
+  <circle cx="1272" cy="622" r="2.5" fill="#9E5C6B" fill-opacity="0.28"/>
+
+  <!-- Subtle bottom accent bar -->
+  <rect x="0" y="1076" width="1920" height="4" fill="#D4A8A0" fill-opacity="0.45"/>
+</svg>

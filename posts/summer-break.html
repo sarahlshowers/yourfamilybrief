@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summer Break Is a Luxury Tax on Parents — Your Family Brief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #FAF5F2;
+      --blush:      #F2DDD8;
+      --dusty-rose: #D4A8A0;
+      --deep-rose:  #9E5C6B;
+      --taupe:      #C4B5A8;
+      --espresso:   #3C2E30;
+      --muted:      #7A6060;
+      --border:     #E8D8D2;
+    }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--cream);
+      color: var(--espresso);
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 245, 242, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--espresso);
+      letter-spacing: 0.01em;
+      text-decoration: none;
+    }
+
+    .nav-logo span { color: var(--deep-rose); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .nav-link:hover { color: var(--espresso); }
+
+    .nav-cta {
+      background: var(--espresso);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 0.5rem 1.25rem;
+      border-radius: 3px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover { background: var(--deep-rose); }
+
+    /* ── CONTENT WRAPPER ── */
+    .post-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ── BACK LINK ── */
+    .back-link {
+      display: inline-block;
+      padding: 1.5rem 0 0;
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.15s;
+    }
+
+    .back-link:hover { opacity: 1; }
+
+    /* ── POST HEADER ── */
+    .post-header {
+      padding: 2rem 0 1.75rem;
+    }
+
+    .post-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--deep-rose);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .post-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.75rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--espresso);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .byline {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.75rem;
+      color: var(--muted);
+      opacity: 0.7;
+      letter-spacing: 0.04em;
+    }
+
+    .byline-sep { opacity: 0.5; }
+
+    /* ── BANNER ── */
+    .banner {
+      margin: 0.25rem 0 2.5rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .banner img { width: 100%; display: block; max-height: 420px; object-fit: cover; }
+
+    /* ── POST BODY ── */
+    .post-body {
+      padding: 0 0 4rem;
+    }
+
+    .post-body p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--espresso);
+      opacity: 0.85;
+      margin-bottom: 1.4rem;
+    }
+
+    .post-body h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      font-weight: 400;
+      color: var(--espresso);
+      margin: 2.5rem 0 0.75rem;
+      line-height: 1.2;
+    }
+
+    blockquote {
+      border-left: 2px solid var(--deep-rose);
+      padding: 0.25rem 0 0.25rem 1.5rem;
+      margin: 2rem 0;
+    }
+
+    blockquote p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-style: italic;
+      opacity: 0.9 !important;
+      margin: 0 !important;
+      line-height: 1.5;
+    }
+
+    /* ── POST FOOTER ── */
+    .post-footer {
+      margin-top: 2.5rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .next-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--deep-rose);
+      opacity: 0.8;
+      margin-bottom: 6px;
+    }
+
+    .next-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--espresso);
+    }
+
+    .next-arrow {
+      font-size: 1.25rem;
+      color: var(--deep-rose);
+      opacity: 0.6;
+      text-decoration: none;
+    }
+
+    .next-arrow:hover { opacity: 1; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--espresso);
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 3rem 2rem;
+      font-size: 0.82rem;
+      line-height: 2;
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: var(--dusty-rose); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .post-wrap { padding: 0 1.25rem; }
+      .post-footer { flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="../index.html">Your Family<span> Brief</span></a>
+    <div class="nav-links">
+      <a class="nav-link" href="../blog.html">Blog</a>
+      <a class="nav-cta" href="https://calendly.com/sarahlshowers/new-meeting" target="_blank" rel="noopener">Book a Call</a>
+    </div>
+  </nav>
+
+  <div class="post-wrap">
+
+  <a class="back-link" href="../blog.html">← All posts</a>
+
+  <div class="post-header">
+    <div class="post-tag">Real Talk</div>
+    <h1>Summer Break Is a Luxury Tax on Parents — Especially the Ones Doing It Alone</h1>
+    <div class="byline">
+      <span>Sarah Showers</span>
+      <span class="byline-sep">·</span>
+      <span>June 21, 2026</span>
+      <span class="byline-sep">·</span>
+      <span>7 min read</span>
+    </div>
+  </div>
+
+  <div class="banner">
+    <img src="../assets/default-banner.svg" alt="Your Family Brief" />
+  </div>
+
+  <div class="post-body">
+
+    <p>Every June, the school doors close and a quiet crisis opens up in its place.</p>
+
+    <p>We talk about summer break like it's a gift — long days, sunshine, kids being kids. And it is, for a moment. But for most parents, the second that last bell rings, the mental load doesn't lighten. It shifts. And depending on where you sit economically, it either gets heavier in ways you can manage, or in ways you genuinely cannot.</p>
+
+    <p>I think about two different families a lot lately. They're both real, in the sense that I've met versions of them over and over again. One can afford camp. One can't. And the distance between those two sentences is larger than it sounds.</p>
+
+    <h2>The Family That "Has It Covered"</h2>
+
+    <p>Let's start with the family that looks fine on paper.</p>
+
+    <p>They make good money. Both parents work. They registered their kids for camp in February — which is now apparently the required timeline if you want anything decent — and yes, they paid. A lot. Day camps in most metro areas are running $400 to $800 a week per kid. For two kids over ten weeks, you're looking at $8,000 to $16,000, easy. Some sleepaway camps have crossed $2,000 a week. That's not a vacation. That's a second mortgage payment.</p>
+
+    <p>But they did it. The camp slots are locked. The problem is everything that comes after.</p>
+
+    <p>Camp starts at 9 and ends at 3. Work starts at 8:30 and ends whenever. Before-care and after-care exist, at additional cost, if you caught the registration window. If you didn't, you're improvising daily — texting neighbors, bribing relatives, checking whether your office has any flexibility today specifically. Every single week has a different schedule because every single camp is different. One week it's nature camp. Next week it's art camp. The week after that is a gap week because the two camps don't line up. Each one has its own drop-off location, parking situation, and pickup window.</p>
+
+    <p>And then there's the packing.</p>
+
+    <p>I used to think school supply shopping was a lot to manage. At least that happens once. Camp packing happens every morning. Bathing suit, change of clothes, sunscreen (labeled), bug spray (also labeled), water bottle (also labeled, because they will lose it), lunch if the camp doesn't provide one. It sounds manageable written out like that. It isn't manageable at 7:15 AM before you have to be on a call, multiplied across however many kids, for ten weeks.</p>
+
+    <blockquote>
+      <p>Even in households where both parents technically share the load, mothers handle roughly 79% of daily childcare responsibilities — scheduling, tracking, remembering, adjusting.</p>
+    </blockquote>
+
+    <p>The mental load doesn't split 50/50 just because two people go to work. One person is usually holding the whole summer in their head. The logistics, the backup plans, the camp forms, the sunscreen situation. That person is usually mom. And she's exhausted by week three.</p>
+
+    <p>This family is not struggling in a way that anyone would recognize from the outside. But they are struggling. The invisible overhead of managing summer — the planning, the logistics, the cost, the patchwork — is real work. It doesn't show up on anyone's job description. Nobody gives you a performance review for keeping it all running.</p>
+
+    <h2>The Family That Doesn't Have a Safety Net</h2>
+
+    <p>Now let's talk about the other family, because this one doesn't get discussed enough in the circles I'm usually in.</p>
+
+    <p>Two-thirds of parents who need summer childcare say they can't afford it. Not that it's expensive. That they genuinely cannot cover it. And the average cost for a summer camp slot is $300 to $2,000 a week — for a single week. For a family earning $50,000 a year, that math doesn't work. It just doesn't.</p>
+
+    <p>So what happens? A few things, and none of them are simple.</p>
+
+    <p>Some kids get left home with an older sibling who is barely old enough to be responsible for themselves. Some families cobble together a rotation of grandparents, aunts, neighbors — what people call "the village," except the village is increasingly worn out, geographically scattered, or unavailable because they're also working. Some parents take on irregular shifts to stagger coverage with a partner. Some parents stop working, at least for the summer, which creates its own financial spiral.</p>
+
+    <p>And food. This one matters more than people realize.</p>
+
+    <p>During the school year, 30 million children receive free or reduced-price lunch through the National School Lunch Program. That's not a small number. For a lot of families, school isn't just childcare — it's a guaranteed meal. Sometimes two. When school ends, that nutrition safety net disappears. Summer meal programs exist, run through the USDA and state programs, but participation drops dramatically. In New York City, only about 36 kids receive summer meals for every 100 who rely on free or reduced-price lunch during the school year. The programs are there. The access isn't.</p>
+
+    <p>Food insecurity among kids is measurably higher in summer than during the school year. Think about that for a second.</p>
+
+    <p>This parent — the one who can't afford camp, who doesn't have a village, who is trying to figure out childcare and lunch and safety all at once — doesn't have a logistics problem. They have a structural one. The system wasn't designed for them. Summer break was designed when families had a parent at home, or a community built around shared care, or kids who could safely roam. None of those things exist universally anymore, and the gap between what summer expects of families and what families actually have to work with is enormous.</p>
+
+    <h2>What Nobody Is Counting</h2>
+
+    <p>These two families are not living the same story. I want to be clear about that. One is exhausted. The other is in crisis. Those are not the same thing, and saying "it's hard for everyone" is one of the ways we avoid sitting with how hard it actually is for some.</p>
+
+    <p>But here's what I keep coming back to: neither of their problems is visible to any system that could change it.</p>
+
+    <p>The exhausted mom holding the whole summer in her head — the logistics, the packing, the gap weeks, the backup plans — that labor doesn't appear on anyone's balance sheet. There's no policy designed to lighten it. There's no conversation at the office about it. It just gets absorbed, quietly, year after year, mostly by her.</p>
+
+    <p>And the parent who is trying to piece together safety and food and care with nothing to work with — that impossibility doesn't show up anywhere either. Summer meal programs exist but don't reach the kids who need them. Childcare subsidies exist but rarely cover the summer gap. The structural failure is enormous and it happens on a schedule, every single year, and it still somehow reads as a personal problem.</p>
+
+    <p>That's what these two families share — not the weight, but the invisibility of it. The fact that we've built a three-month break into our calendar without building any actual support around it, and then asked individual families to figure it out on their own.</p>
+
+    <p>Some of them can. Most of them are just getting through it.</p>
+
+    <p>And every June, it starts over.</p>
+
+    <div class="post-footer">
+      <div>
+        <div class="next-label">Up next</div>
+        <div class="next-title">What is "mental load," and why does naming it actually matter?</div>
+      </div>
+      <a class="next-arrow" href="what-is-mental-load.html">→</a>
+    </div>
+
+  </div>
+
+  </div><!-- /post-wrap -->
+
+  <footer>
+    <p style="margin-bottom:0.5rem;">
+      <strong style="color:rgba(255,255,255,0.7);">Your Family Brief</strong>
+    </p>
+    <p>
+      <a href="mailto:admin@yourfamilybrief.com">admin@yourfamilybrief.com</a>
+      &nbsp;·&nbsp;
+      <a href="#">Privacy Policy</a>
+      &nbsp;·&nbsp;
+      © 2026 Your Family Brief
+    </p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to show your partner what you're actually managing — Your Family Brief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream:      #FAF5F2;
+      --blush:      #F2DDD8;
+      --dusty-rose: #D4A8A0;
+      --deep-rose:  #9E5C6B;
+      --taupe:      #C4B5A8;
+      --espresso:   #3C2E30;
+      --muted:      #7A6060;
+      --border:     #E8D8D2;
+    }
+    body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--espresso); min-height: 100vh; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(250,245,242,0.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 500; color: var(--espresso); letter-spacing: 0.01em; text-decoration: none; }
+    .nav-logo span { color: var(--deep-rose); }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-link { font-size: 0.82rem; font-weight: 400; letter-spacing: 0.05em; color: var(--muted); text-decoration: none; transition: color 0.15s; }
+    .nav-link:hover { color: var(--espresso); }
+    .nav-cta { background: var(--espresso); color: #fff; text-decoration: none; font-size: 0.82rem; font-weight: 500; padding: 0.5rem 1.25rem; border-radius: 3px; letter-spacing: 0.06em; text-transform: uppercase; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--deep-rose); }
+    .post-wrap { max-width: 760px; margin: 0 auto; padding: 0 2rem; }
+    .back-link { display: inline-block; padding: 1.5rem 0 0; font-size: 0.75rem; letter-spacing: 0.06em; color: var(--muted); text-decoration: none; opacity: 0.7; transition: opacity 0.15s; }
+    .back-link:hover { opacity: 1; }
+    .post-header { padding: 2rem 0 1.75rem; }
+    .post-tag { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--deep-rose); font-weight: 500; margin-bottom: 12px; }
+    .post-header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem, 3.5vw, 2.75rem); font-weight: 300; font-style: italic; color: var(--espresso); line-height: 1.2; margin-bottom: 1.25rem; }
+    .byline { display: flex; align-items: center; gap: 10px; font-size: 0.75rem; color: var(--muted); opacity: 0.7; letter-spacing: 0.04em; }
+    .byline-sep { opacity: 0.5; }
+    .banner { margin: 0.25rem 0 2.5rem; border-radius: 8px; overflow: hidden; }
+    .banner img { width: 100%; display: block; max-height: 420px; object-fit: cover; }
+    .post-body { padding: 0 0 4rem; }
+    .post-body p { font-size: 1rem; line-height: 1.85; color: var(--espresso); opacity: 0.85; margin-bottom: 1.4rem; }
+    .post-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 400; color: var(--espresso); margin: 2.5rem 0 0.75rem; line-height: 1.2; }
+    blockquote { border-left: 2px solid var(--deep-rose); padding: 0.25rem 0 0.25rem 1.5rem; margin: 2rem 0; }
+    blockquote p { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; opacity: 0.9 !important; margin: 0 !important; line-height: 1.5; }
+    .post-footer { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .next-label { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--deep-rose); opacity: 0.8; margin-bottom: 6px; }
+    .next-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic; color: var(--espresso); }
+    .next-arrow { font-size: 1.25rem; color: var(--deep-rose); opacity: 0.6; text-decoration: none; }
+    .next-arrow:hover { opacity: 1; }
+    footer { background: var(--espresso); color: rgba(255,255,255,0.4); text-align: center; padding: 3rem 2rem; font-size: 0.82rem; line-height: 2; }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--dusty-rose); }
+    @media (max-width: 640px) {
+      .post-wrap { padding: 0 1.25rem; }
+      .post-footer { flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="../index.html">Your Family<span> Brief</span></a>
+    <div class="nav-links">
+      <a class="nav-link" href="../blog.html">Blog</a>
+      <a class="nav-cta" href="https://calendly.com/sarahlshowers/new-meeting" target="_blank" rel="noopener">Book a Call</a>
+    </div>
+  </nav>
+
+  <div class="post-wrap">
+
+    <a class="back-link" href="../blog.html">← All posts</a>
+
+    <div class="post-header">
+      <div class="post-tag">For Couples</div>
+      <h1>How to show your partner what you're actually managing (without it becoming a fight)</h1>
+      <div class="byline">
+        <span>Sarah Showers</span>
+        <span class="byline-sep">·</span>
+        <span>May 28, 2026</span>
+        <span class="byline-sep">·</span>
+        <span>4 min read</span>
+      </div>
+    </div>
+
+    <div class="banner">
+      <img src="../assets/default-banner.svg" alt="Your Family Brief" />
+    </div>
+
+    <div class="post-body">
+
+      <p>Most people who carry the bulk of the mental load have tried to talk about it at some point. And most of those conversations didn't go the way they hoped.</p>
+
+      <p>Maybe you brought it up when you were already depleted, which meant it came out frustrated. Maybe your partner got defensive. Maybe they said they'd help more, and things improved for a while, and then quietly drifted back. Maybe the conversation ended without anything actually changing — just a vague agreement to try harder, and then the same low hum of exhaustion resuming the next week.</p>
+
+      <p>If that sounds familiar, the problem probably wasn't the conversation. It was the conditions it happened in.</p>
+
+      <h2>Why these conversations usually go sideways</h2>
+
+      <p>When you're burned out and trying to explain the mental load to someone who doesn't feel it, the deck is stacked against you.</p>
+
+      <p>You're describing something invisible. You're doing it while tired. And you're asking someone to understand a weight they've never had to carry in quite the same way. That combination almost guarantees the conversation tips into "you sound like you're complaining" territory — even if neither person means for it to go there.</p>
+
+      <p>Your partner hears a list of grievances. You feel like they're not listening. They feel attacked. You feel unseen. Nothing gets resolved. Repeat indefinitely.</p>
+
+      <p>The issue isn't that they don't care. It's that they genuinely cannot see what you're managing. And when you describe it verbally, in the middle of an already tense moment, the picture still doesn't form for them. What they hear is your frustration. What they don't hear is the actual content — the scope and texture of what's living in your head.</p>
+
+      <blockquote>
+        <p>The goal isn't to convince your partner that you're overwhelmed. It's to make the invisible visible in a way they can actually receive.</p>
+      </blockquote>
+
+      <p>That's a different goal. And it requires a different approach.</p>
+
+      <h2>Making it concrete before you make it a conversation</h2>
+
+      <p>Here's something worth trying before the next conversation: get it out of your head first.</p>
+
+      <p>Set aside twenty minutes — ideally early in the morning before the day starts — and write down everything you've been tracking. Not just the tasks on your official to-do list. Everything that you're aware of, even loosely. The appointment that needs to get scheduled. The thing you noticed was running low. The email you've been mentally composing. The social thing coming up that requires coordination. The thing your kid mentioned that you filed away.</p>
+
+      <p>All of it.</p>
+
+      <p>This isn't a to-do list. You're not trying to get organized. You're trying to externalize what's been living in your head so that both of you can actually see it.</p>
+
+      <p>When you can show someone that list — not narrate it, show it — something changes. It's no longer you expressing frustration. It's both of you looking at the same thing together. That small shift, from "me vs. you" to "us looking at this together," is often what makes the conversation possible.</p>
+
+      <h2>What a different conversation looks like</h2>
+
+      <p>You're not trying to win. You're not trying to prove a point. You're trying to get to a place where your partner can see the picture clearly enough to actually engage with it.</p>
+
+      <p>That means the goal isn't agreement in the moment. It's shared understanding. And shared understanding usually starts with the other person being able to say, sincerely, "I didn't realize all of that was sitting with you."</p>
+
+      <p>From there, you can talk about what it would mean to actually share some of it — not just the tasks, but the awareness. What would it look like for them to own something, not just do it when asked? What would it look like for you to not have to be the one who notices?</p>
+
+      <p>Those are harder questions. But they're the right ones, and they're a lot easier to get to when you're both starting from a clear picture instead of a heated moment.</p>
+
+      <p>Getting that picture out of your head — into a form both of you can see — is often the first thing that has to happen. Once someone can actually see what you've been carrying, the conversation changes. That's the work worth doing. And it usually starts with the clearest possible look at what's actually there.</p>
+
+      <div class="post-footer">
+        <div>
+          <div class="next-label">From the beginning</div>
+          <div class="next-title">What is "mental load," and why does naming it actually matter?</div>
+        </div>
+        <a class="next-arrow" href="what-is-mental-load.html">→</a>
+      </div>
+
+    </div>
+
+  </div><!-- /post-wrap -->
+
+  <footer>
+    <p style="margin-bottom:0.5rem;">
+      <strong style="color:rgba(255,255,255,0.7);">Your Family Brief</strong>
+    </p>
+    <p>
+      <a href="mailto:admin@yourfamilybrief.com">admin@yourfamilybrief.com</a>
+      &nbsp;·&nbsp;
+      <a href="#">Privacy Policy</a>
+      &nbsp;·&nbsp;
+      © 2026 Your Family Brief
+    </p>
+  </footer>
+
+</body>
+</html>

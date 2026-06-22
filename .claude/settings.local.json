@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pandoc FamilyOS_MRD.docx -o /tmp/mrd.md)",
+      "Bash(pandoc FamilyOS_PRD.docx -o /tmp/prd.md)",
+      "mcp__362816db-03a0-45c2-83fc-1903b2432d88__search_files",
+      "Bash(python3 -c \"import json,sys; files=json.load\\(sys.stdin\\)['files']; [print\\(f['id'], f['name']\\) for f in files]\")",
+      "Bash(python3 -c ' *)",
+      "mcp__362816db-03a0-45c2-83fc-1903b2432d88__read_file_content",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s http://localhost:8765/)",
+      "Bash(ls -lt ~/Desktop/ | head -20; echo \"---\"; ls -lt ~/Downloads/ | head -20)",
+      "Bash(cp \"/Users/sarahshowers/Desktop/profile pic.png\" \"/Users/sarahshowers/Documents/Claude/workspaces/blue-sky/Project Blue Sky/sarah-profile.png\")",
+      "Bash(node -e ' *)",
+      "Bash(npx --yes sharp-cli --input og-image.svg --output og-image.png)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(grep -i -n \"paid\\\\|ads\\\\|seo\\\\|search engine\\\\|google ads\\\\|ppc\" \"/Users/sarahshowers/Documents/Claude/workspaces/blue-sky/business/YFB_GTM_Strategy.md\" \"/Users/sarahshowers/Documents/Claude/workspaces/blue-sky/business/YFB_LongTerm_Strategy.md\" 2>/dev/null | head -30)",
+      "WebFetch(domain:www.skysports.com)",
+      "mcp__80c331e4-085f-4b2e-97e1-148493f1b93a__generate-design",
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget",
+      "mcp__80c331e4-085f-4b2e-97e1-148493f1b93a__list-brand-kits",
+      "mcp__75cbe95a-e2de-4292-87b1-bd50ba9c10c9__notion-fetch",
+      "Bash(grep -E \"color|font|#[0-9A-Fa-f]{3,6}\" \"/Users/sarahshowers/Documents/Claude/workspaces/blue-sky/Project Blue Sky/index.html\")",
+      "mcp__9a131854-883e-43f1-8a1f-9bd568c922bd__search_threads",
+      "mcp__9a131854-883e-43f1-8a1f-9bd568c922bd__get_thread",
+      "mcp__75cbe95a-e2de-4292-87b1-bd50ba9c10c9__notion-create-pages"
+    ]
+  }
+}

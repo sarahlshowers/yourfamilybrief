@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#F2DDD8" />
+      <stop offset="55%"  stop-color="#E8C8C0" />
+      <stop offset="100%" stop-color="#D4A8A0" />
+    </linearGradient>
+    <linearGradient id="vignette" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#C4A098" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#9E7070" stop-opacity="0.08" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="480" fill="url(#bg)" />
+  <rect width="1200" height="480" fill="url(#vignette)" />
+
+  <!-- Subtle texture dots -->
+  <circle cx="120"  cy="90"  r="180" fill="#C4A098" fill-opacity="0.10" />
+  <circle cx="1080" cy="380" r="220" fill="#9E5C6B" fill-opacity="0.07" />
+  <circle cx="600"  cy="50"  r="130" fill="#FAF5F2" fill-opacity="0.12" />
+
+  <!-- Top hairline -->
+  <line x1="520" y1="158" x2="680" y2="158" stroke="#9E5C6B" stroke-width="0.75" stroke-opacity="0.45" />
+
+  <!-- Wordmark -->
+  <text
+    x="600" y="218"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="15"
+    font-weight="normal"
+    fill="#9E5C6B"
+    text-anchor="middle"
+    letter-spacing="9"
+  >YOUR FAMILY BRIEF</text>
+
+  <!-- Tagline -->
+  <text
+    x="600" y="276"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="38"
+    font-style="italic"
+    font-weight="normal"
+    fill="#3C2E30"
+    fill-opacity="0.55"
+    text-anchor="middle"
+    letter-spacing="0.5"
+  >on family, clarity, and home</text>
+
+  <!-- Bottom hairline -->
+  <line x1="520" y1="328" x2="680" y2="328" stroke="#9E5C6B" stroke-width="0.75" stroke-opacity="0.45" />
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="476" width="1200" height="4" fill="#D4A8A0" fill-opacity="0.6" />
+</svg>

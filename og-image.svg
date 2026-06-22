@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&amp;family=Jost:wght@400;500&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#FAF5F2"/>
+
+  <!-- Subtle blush accent bar top -->
+  <rect width="1200" height="6" fill="#D4A8A0"/>
+
+  <!-- Decorative soft circle -->
+  <circle cx="960" cy="315" r="340" fill="#F2DDD8" opacity="0.35"/>
+  <circle cx="960" cy="315" r="220" fill="#F2DDD8" opacity="0.3"/>
+
+  <!-- Wordmark -->
+  <text x="100" y="260" font-family="Georgia, serif" font-size="72" font-weight="400" fill="#3C2E30" letter-spacing="-1">Your Family</text>
+  <text x="100" y="350" font-family="Georgia, serif" font-size="72" font-weight="400" fill="#9E5C6B" letter-spacing="-1">Brief.</text>
+
+  <!-- Divider -->
+  <rect x="100" y="385" width="80" height="1.5" fill="#D4A8A0"/>
+
+  <!-- Tagline -->
+  <text x="100" y="430" font-family="'Gill Sans', Calibri, sans-serif" font-size="22" font-weight="400" fill="#7A6060" letter-spacing="1">A clearer picture of your family. In 48 hours.</text>
+
+  <!-- URL -->
+  <text x="100" y="530" font-family="'Gill Sans', Calibri, sans-serif" font-size="18" font-weight="500" fill="#C4A99A" letter-spacing="2">YOURFAMILYBRIEF.COM</text>
+</svg>

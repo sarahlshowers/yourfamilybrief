@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Office lock files
+.~lock.*#
+
+# Node (if ever needed)
+node_modules/
+
+# Environment / secrets
+.env
+*.env.local
+
+# Client data — never commit (PII, private family briefs)
+reports/
+
+# Generated binary assets — track source scripts, not outputs
+*.pdf
+*.docx
+*.xlsx
+og-image.png
+sarah-profile.png
+instagram/
+
+# Skill output / runtime files (not source)
+skills/*.skill

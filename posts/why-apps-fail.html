@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why apps don't fix the mental load — Your Family Brief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream:      #FAF5F2;
+      --blush:      #F2DDD8;
+      --dusty-rose: #D4A8A0;
+      --deep-rose:  #9E5C6B;
+      --taupe:      #C4B5A8;
+      --espresso:   #3C2E30;
+      --muted:      #7A6060;
+      --border:     #E8D8D2;
+    }
+    body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--espresso); min-height: 100vh; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(250,245,242,0.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 500; color: var(--espresso); letter-spacing: 0.01em; text-decoration: none; }
+    .nav-logo span { color: var(--deep-rose); }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-link { font-size: 0.82rem; font-weight: 400; letter-spacing: 0.05em; color: var(--muted); text-decoration: none; transition: color 0.15s; }
+    .nav-link:hover { color: var(--espresso); }
+    .nav-cta { background: var(--espresso); color: #fff; text-decoration: none; font-size: 0.82rem; font-weight: 500; padding: 0.5rem 1.25rem; border-radius: 3px; letter-spacing: 0.06em; text-transform: uppercase; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--deep-rose); }
+    .post-wrap { max-width: 760px; margin: 0 auto; padding: 0 2rem; }
+    .back-link { display: inline-block; padding: 1.5rem 0 0; font-size: 0.75rem; letter-spacing: 0.06em; color: var(--muted); text-decoration: none; opacity: 0.7; transition: opacity 0.15s; }
+    .back-link:hover { opacity: 1; }
+    .post-header { padding: 2rem 0 1.75rem; }
+    .post-tag { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--deep-rose); font-weight: 500; margin-bottom: 12px; }
+    .post-header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem, 3.5vw, 2.75rem); font-weight: 300; font-style: italic; color: var(--espresso); line-height: 1.2; margin-bottom: 1.25rem; }
+    .byline { display: flex; align-items: center; gap: 10px; font-size: 0.75rem; color: var(--muted); opacity: 0.7; letter-spacing: 0.04em; }
+    .byline-sep { opacity: 0.5; }
+    .banner { margin: 0.25rem 0 2.5rem; border-radius: 8px; overflow: hidden; }
+    .banner img { width: 100%; display: block; max-height: 420px; object-fit: cover; }
+    .post-body { padding: 0 0 4rem; }
+    .post-body p { font-size: 1rem; line-height: 1.85; color: var(--espresso); opacity: 0.85; margin-bottom: 1.4rem; }
+    .post-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 400; color: var(--espresso); margin: 2.5rem 0 0.75rem; line-height: 1.2; }
+    blockquote { border-left: 2px solid var(--deep-rose); padding: 0.25rem 0 0.25rem 1.5rem; margin: 2rem 0; }
+    blockquote p { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; opacity: 0.9 !important; margin: 0 !important; line-height: 1.5; }
+    .post-footer { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .next-label { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--deep-rose); opacity: 0.8; margin-bottom: 6px; }
+    .next-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic; color: var(--espresso); }
+    .next-arrow { font-size: 1.25rem; color: var(--deep-rose); opacity: 0.6; text-decoration: none; }
+    .next-arrow:hover { opacity: 1; }
+    footer { background: var(--espresso); color: rgba(255,255,255,0.4); text-align: center; padding: 3rem 2rem; font-size: 0.82rem; line-height: 2; }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--dusty-rose); }
+    @media (max-width: 640px) {
+      .post-wrap { padding: 0 1.25rem; }
+      .post-footer { flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="../index.html">Your Family<span> Brief</span></a>
+    <div class="nav-links">
+      <a class="nav-link" href="../blog.html">Blog</a>
+      <a class="nav-cta" href="https://calendly.com/sarahlshowers/new-meeting" target="_blank" rel="noopener">Book a Call</a>
+    </div>
+  </nav>
+
+  <div class="post-wrap">
+
+    <a class="back-link" href="../blog.html">← All posts</a>
+
+    <div class="post-header">
+      <div class="post-tag">Real Talk</div>
+      <h1>Why apps don't fix the mental load — and what would actually help</h1>
+      <div class="byline">
+        <span>Sarah Showers</span>
+        <span class="byline-sep">·</span>
+        <span>June 6, 2026</span>
+        <span class="byline-sep">·</span>
+        <span>6 min read</span>
+      </div>
+    </div>
+
+    <div class="banner">
+      <img src="../assets/default-banner.svg" alt="Your Family Brief" />
+    </div>
+
+    <div class="post-body">
+
+      <p>If you've tried to solve this problem with technology, you're not alone. Most people do. A shared calendar, a household task app, a whiteboard in the kitchen. Maybe a color-coded chore chart that worked for about two weeks.</p>
+
+      <p>None of it stuck. And you probably blamed yourself — you didn't stay consistent, you forgot to update it, you couldn't get your partner to actually use it.</p>
+
+      <p>But here's the thing: the tools weren't failing because you failed. They were failing because they were solving the wrong problem.</p>
+
+      <h2>Moving the information isn't the same as moving the responsibility</h2>
+
+      <p>Shared calendars are genuinely useful. Nobody's arguing against them. But a shared calendar moves information. It doesn't move the awareness that generated that information in the first place.</p>
+
+      <p>Someone still had to know that the dentist appointment needed to happen. Someone still had to find the time slot, book it, remember which kid needed which kind of appointment, and then put it in the calendar. The calendar just holds it. It doesn't produce it.</p>
+
+      <blockquote>
+        <p>Shared calendars move the information. They don't move the responsibility. That distinction is everything.</p>
+      </blockquote>
+
+      <p>This is the gap that almost every organizational tool misses. They assume the hard part is access to information. But the hard part isn't knowing where the appointment is — it's knowing it needs to exist, and carrying that knowledge until someone acts on it.</p>
+
+      <h2>Why every tool fails the same way</h2>
+
+      <p>Look at any household management app and you'll find the same underlying assumption: that the problem is organizational, and that what you need is a better container.</p>
+
+      <p>Here's what that looks like in practice. You download the app. You spend time setting it up. You figure out the categories, the recurring tasks, who's assigned to what. Then you try to get your partner onboard — which is its own project, with its own emotional weight. Then you try to keep the system current, because a household is not static and the app doesn't update itself.</p>
+
+      <p>Three weeks in, you're doing all the same cognitive work you were doing before, plus you're maintaining a system on top of it.</p>
+
+      <p>That's more work, not less. The tool has added overhead without actually reducing load.</p>
+
+      <p>And the deeper issue is this: these products are designed for individuals. They hand you a blank slate and ask you to build the infrastructure of your household inside it. They don't know your rhythms, your kids' ages, your specific chaos. They can't ask you what's actually draining you. They just wait for you to figure it out and put it somewhere.</p>
+
+      <h2>What would actually help</h2>
+
+      <p>What actually helps isn't another place to put your to-do list. It's something that starts by listening.</p>
+
+      <p>Not listening in the passive, here's-a-journal-prompt sense. Actually listening — someone asking the right questions, drawing out what's in your head, helping you see what you've been managing without realizing it.</p>
+
+      <p>When people describe what they actually want, they're usually describing that experience. They want to sit down with someone who can hold the whole picture, help them organize it, and give them something concrete to do with it. Not a system they have to build and maintain. A real conversation.</p>
+
+      <p>The tools that exist weren't built for that. They were built to organize information you already have clarity about. But most people carrying the mental load don't have clarity. They have a low-grade constant hum of things-I-can't-forget, and what they need first is help making it visible and manageable.</p>
+
+      <p>That's a different kind of help than an app can offer. It's the kind that starts with a real conversation — the kind that actually changes something.</p>
+
+      <div class="post-footer">
+        <div>
+          <div class="next-label">Up next</div>
+          <div class="next-title">How to show your partner what you're actually managing (without it becoming a fight)</div>
+        </div>
+        <a class="next-arrow" href="showing-partner.html">→</a>
+      </div>
+
+    </div>
+
+  </div><!-- /post-wrap -->
+
+  <footer>
+    <p style="margin-bottom:0.5rem;">
+      <strong style="color:rgba(255,255,255,0.7);">Your Family Brief</strong>
+    </p>
+    <p>
+      <a href="mailto:admin@yourfamilybrief.com">admin@yourfamilybrief.com</a>
+      &nbsp;·&nbsp;
+      <a href="#">Privacy Policy</a>
+      &nbsp;·&nbsp;
+      © 2026 Your Family Brief
+    </p>
+  </footer>
+
+</body>
+</html>

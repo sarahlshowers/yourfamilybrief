@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plain AI in Plain English — Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ─── Brand tokens ─── */
+    :root {
+      --linen:    #FAF5F2;
+      --blush:    #F2DDD8;
+      --dusty:    #D4A8A0;
+      --rose:     #9E5C6B;
+      --taupe:    #C4B5A8;
+      --espresso: #3C2E30;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans:  'Jost', system-ui, sans-serif;
+    }
+
+    /* ─── Reset ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--linen);
+      color: var(--espresso);
+      min-height: 100vh;
+    }
+
+    /* ─── Header ─── */
+    header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 2rem 3rem;
+      border-bottom: 0.5px solid var(--taupe);
+    }
+
+    .wordmark {
+      font-family: var(--serif);
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    nav { display: flex; gap: 24px; }
+    nav a {
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      color: var(--espresso);
+      text-decoration: none;
+      opacity: 0.6;
+      transition: opacity 0.15s;
+    }
+    nav a:hover { opacity: 1; }
+
+    /* ─── Hero ─── */
+    .hero {
+      padding: 3rem 3rem 2rem;
+      max-width: 760px;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: 48px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--espresso);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+    .hero p {
+      font-size: 15px;
+      color: var(--espresso);
+      opacity: 0.55;
+      letter-spacing: 0.02em;
+      line-height: 1.6;
+    }
+
+    /* ─── Divider ─── */
+    .hairline {
+      height: 0.5px;
+      background: var(--taupe);
+      margin: 0 3rem;
+    }
+
+    /* ─── Post list ─── */
+    .post-list {
+      padding: 0 3rem 4rem;
+    }
+
+    .post-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px 32px;
+      align-items: start;
+      padding: 2rem 0;
+      border-bottom: 0.5px solid var(--blush);
+      text-decoration: none;
+      color: inherit;
+      transition: opacity 0.15s;
+    }
+    .post-card:last-child { border-bottom: none; }
+    .post-card:hover { opacity: 0.75; }
+
+    .post-tag {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .post-title {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.25;
+      color: var(--espresso);
+      margin-bottom: 6px;
+    }
+
+    .post-card.featured .post-title {
+      font-size: 30px;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .featured-badge {
+      display: inline-block;
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--blush);
+      color: var(--rose);
+      padding: 3px 10px;
+      border-radius: 2px;
+      margin-bottom: 8px;
+    }
+
+    .post-excerpt {
+      font-size: 14px;
+      color: var(--espresso);
+      opacity: 0.55;
+      line-height: 1.65;
+      max-width: 500px;
+    }
+
+    .post-meta {
+      text-align: right;
+      white-space: nowrap;
+      padding-top: 4px;
+    }
+
+    .post-date {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--espresso);
+      opacity: 0.4;
+      margin-bottom: 4px;
+    }
+
+    .read-time {
+      font-size: 11px;
+      color: var(--rose);
+      opacity: 0.7;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      padding: 2rem 3rem;
+      border-top: 0.5px solid var(--taupe);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      opacity: 0.4;
+      letter-spacing: 0.04em;
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 640px) {
+      header, .hero, .hairline, .post-list, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .hairline { margin-left: 1.5rem; margin-right: 1.5rem; }
+      .hero h1 { font-size: 34px; }
+      .post-card { grid-template-columns: 1fr; }
+      .post-meta { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="wordmark" href="/">Plain AI in Plain English</a>
+    <nav>
+      <a href="/about">About</a>
+      <a href="/archive">Archive</a>
+      <a href="/subscribe">Subscribe</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>AI, without the jargon.</h1>
+    <p>Plain explanations of what's actually happening in AI — for curious people who don't want to fake it.</p>
+  </div>
+
+  <div class="hairline"></div>
+
+  <div class="post-list">
+
+    <!-- Featured / latest post -->
+    <a class="post-card featured" href="/posts/what-does-hallucinate-mean">
+      <div>
+        <div class="featured-badge">Latest</div>
+        <div class="post-tag">Explainer</div>
+        <div class="post-title">What does it actually mean when an AI "hallucinates"?</div>
+        <p class="post-excerpt">The word gets thrown around constantly, but what's really happening under the hood — and should you care?</p>
+      </div>
+      <div class="post-meta">
+        <span class="post-date">June 14, 2026</span>
+        <span class="read-time">5 min read</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="/posts/tokens-embeddings">
+      <div>
+        <div class="post-tag">How it works</div>
+        <div class="post-title">Tokens, embeddings, and why GPT is autocomplete on steroids</div>
+        <p class="post-excerpt">A plain-language tour of the mechanics that make large language models go.</p>
+      </div>
+      <div class="post-meta">
+        <span class="post-date">June 8, 2026</span>
+        <span class="read-time">7 min read</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="/posts/why-ai-sounds-formal">
+      <div>
+        <div class="post-tag">Opinion</div>
+        <div class="post-title">The real reason AI assistants feel weirdly formal</div>
+        <p class="post-excerpt">It's not a bug — it's training data. Here's what that means for how you talk to them.</p>
+      </div>
+      <div class="post-meta">
+        <span class="post-date">May 29, 2026</span>
+        <span class="read-time">4 min read</span>
+      </div>
+    </a>
+
+  </div>
+
+  <footer>
+    <span>Plain AI in Plain English</span>
+    <span>© 2026 Sarah Showers</span>
+  </footer>
+
+</body>
+</html>

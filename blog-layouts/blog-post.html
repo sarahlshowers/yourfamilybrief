@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post Title — Plain AI in Plain English</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ─── Brand tokens ─── */
+    :root {
+      --linen:    #FAF5F2;
+      --blush:    #F2DDD8;
+      --dusty:    #D4A8A0;
+      --rose:     #9E5C6B;
+      --taupe:    #C4B5A8;
+      --espresso: #3C2E30;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans:  'Jost', system-ui, sans-serif;
+    }
+
+    /* ─── Reset ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--linen);
+      color: var(--espresso);
+      min-height: 100vh;
+    }
+
+    /* ─── Header ─── */
+    header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 2rem 3rem;
+      border-bottom: 0.5px solid var(--taupe);
+    }
+
+    .wordmark {
+      font-family: var(--serif);
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    nav { display: flex; gap: 24px; }
+    nav a {
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      color: var(--espresso);
+      text-decoration: none;
+      opacity: 0.6;
+      transition: opacity 0.15s;
+    }
+    nav a:hover { opacity: 1; }
+
+    /* ─── Back link ─── */
+    .back-link {
+      display: inline-block;
+      padding: 1.25rem 3rem 0;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      color: var(--espresso);
+      text-decoration: none;
+      opacity: 0.45;
+      transition: opacity 0.15s;
+    }
+    .back-link:hover { opacity: 0.8; }
+
+    /* ─── Post header ─── */
+    .post-header {
+      padding: 2rem 3rem 1.5rem;
+      max-width: 680px;
+    }
+
+    .post-tag {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .post-header h1 {
+      font-family: var(--serif);
+      font-size: 42px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--espresso);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .byline {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--espresso);
+      opacity: 0.45;
+      letter-spacing: 0.04em;
+    }
+    .byline-sep { opacity: 0.5; }
+
+    /* ─── Banner ─── */
+    .banner {
+      margin: 0.5rem 3rem 2.5rem;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .banner img {
+      width: 100%;
+      display: block;
+      max-height: 400px;
+      object-fit: cover;
+    }
+    /* Placeholder shown when no image src is set */
+    .banner-placeholder {
+      height: 240px;
+      background: var(--blush);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .banner-placeholder span {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dusty);
+    }
+
+    /* ─── Body ─── */
+    .post-body {
+      padding: 0 3rem 4rem;
+      max-width: 680px;
+    }
+
+    .post-body p {
+      font-size: 16px;
+      line-height: 1.85;
+      color: var(--espresso);
+      opacity: 0.82;
+      margin-bottom: 1.4rem;
+    }
+
+    .post-body h2 {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--espresso);
+      margin: 2.5rem 0 0.75rem;
+      line-height: 1.2;
+    }
+
+    .post-body h3 {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 500;
+      font-style: italic;
+      color: var(--espresso);
+      margin: 2rem 0 0.5rem;
+    }
+
+    /* Pull quote */
+    blockquote {
+      border-left: 2px solid var(--rose);
+      padding: 0.25rem 0 0.25rem 1.5rem;
+      margin: 2rem 0;
+    }
+    blockquote p {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-style: italic;
+      opacity: 0.9 !important;
+      margin: 0 !important;
+      line-height: 1.5;
+    }
+
+    /* ─── Post footer / next post ─── */
+    .post-footer {
+      margin-top: 2.5rem;
+      padding-top: 1.75rem;
+      border-top: 0.5px solid var(--taupe);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .next-label {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rose);
+      opacity: 0.7;
+      margin-bottom: 6px;
+    }
+
+    .next-title {
+      font-family: var(--serif);
+      font-size: 19px;
+      font-style: italic;
+      color: var(--espresso);
+    }
+
+    .next-arrow {
+      font-size: 20px;
+      color: var(--rose);
+      opacity: 0.6;
+      text-decoration: none;
+    }
+    .next-arrow:hover { opacity: 1; }
+
+    /* ─── Site footer ─── */
+    footer {
+      padding: 2rem 3rem;
+      border-top: 0.5px solid var(--taupe);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      opacity: 0.4;
+      letter-spacing: 0.04em;
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 640px) {
+      header, .post-header, .post-body, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .back-link { padding-left: 1.5rem; }
+      .banner { margin-left: 1.5rem; margin-right: 1.5rem; }
+      .post-header h1 { font-size: 30px; }
+      .post-footer { flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="wordmark" href="/">Plain AI in Plain English</a>
+    <nav>
+      <a href="/about">About</a>
+      <a href="/archive">Archive</a>
+      <a href="/subscribe">Subscribe</a>
+    </nav>
+  </header>
+
+  <a class="back-link" href="/">← All posts</a>
+
+  <div class="post-header">
+    <div class="post-tag">Explainer</div>
+    <h1>What does it actually mean when an AI "hallucinates"?</h1>
+    <div class="byline">
+      <span>Sarah Showers</span>
+      <span class="byline-sep">·</span>
+      <span>June 14, 2026</span>
+      <span class="byline-sep">·</span>
+      <span>5 min read</span>
+    </div>
+  </div>
+
+  <!-- Banner: swap placeholder div for <img src="..." alt="..."> when image is ready -->
+  <div class="banner">
+    <div class="banner-placeholder">
+      <span>Post banner image</span>
+    </div>
+  </div>
+
+  <div class="post-body">
+
+    <p>You've probably seen it by now. You ask an AI a question, it answers confidently, and then you google it and realize the answer was completely made up. That's a hallucination — but calling it that makes it sound more mysterious than it is.</p>
+
+    <h2>It's not lying. It's predicting.</h2>
+
+    <p>Language models don't look things up. They generate the most statistically plausible next word, over and over. When the training data is thin or the question is ambiguous, the model fills in the gaps — with something that sounds right, whether or not it is.</p>
+
+    <blockquote>
+      <p>"The model doesn't know what it doesn't know. That's the whole problem."</p>
+    </blockquote>
+
+    <p>Think of it like autocomplete that went to college. It's very good at sounding coherent. It's not trying to deceive you — it just doesn't have a way to flag uncertainty the way a human would say "I'm not sure, let me check."</p>
+
+    <h2>Why does it happen more on some questions?</h2>
+
+    <p>Hallucinations tend to cluster around things that are obscure, very recent, or highly specific — places where the training data is sparse. Ask about a famous historical event and you'll probably get a solid answer. Ask about a niche local business, a minor public figure, or yesterday's news and the odds go up.</p>
+
+    <p>The model is doing its best with the distribution of text it was trained on. If there wasn't much written about a topic, there's not much to go on.</p>
+
+    <div class="post-footer">
+      <div>
+        <div class="next-label">Up next</div>
+        <div class="next-title">Tokens, embeddings, and why GPT is autocomplete on steroids</div>
+      </div>
+      <a class="next-arrow" href="/posts/tokens-embeddings">→</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>Plain AI in Plain English</span>
+    <span>© 2026 Sarah Showers</span>
+  </footer>
+
+</body>
+</html>
