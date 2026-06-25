@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P5KGVDWX');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Family Brief — Finally, someone who sees it all</title>
@@ -18,703 +25,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --cream:      #FAF5F2;
-      --blush:      #F2DDD8;
-      --dusty-rose: #D4A8A0;
-      --deep-rose:  #9E5C6B;
-      --taupe:      #C4B5A8;
-      --espresso:   #3C2E30;
-      --warm-white: #FFFFFF;
-      --text:       #3C2E30;
-      --muted:      #7A6060;
-      --muted-light:#C4A99A;
-      --border:     #E8D8D2;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Jost', sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(250, 245, 242, 0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
-
-    .nav-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: var(--espresso);
-      letter-spacing: 0.01em;
-    }
-
-    .nav-logo span { color: var(--deep-rose); }
-
-    .nav-cta {
-      background: var(--espresso);
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 500;
-      padding: 0.5rem 1.25rem;
-      border-radius: 3px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      transition: background 0.2s;
-    }
-
-    .nav-cta:hover { background: var(--deep-rose); }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .nav-link {
-      font-size: 0.82rem;
-      font-weight: 400;
-      letter-spacing: 0.05em;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.15s;
-    }
-
-    .nav-link:hover { color: var(--espresso); }
-
-
-    /* ── HERO ── */
-    .hero {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 6rem 2rem 5rem;
-      text-align: center;
-    }
-
-    .hero-kicker {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--dusty-rose);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.6rem, 5.5vw, 4rem);
-      font-weight: 300;
-      line-height: 1.15;
-      color: var(--espresso);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--deep-rose);
-    }
-
-    .hero-sub {
-      font-size: 1.1rem;
-      color: var(--muted);
-      max-width: 540px;
-      margin: 0 auto 2.5rem;
-      font-weight: 300;
-      line-height: 1.7;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      display: inline-block;
-      background: var(--deep-rose);
-      color: #fff;
-      text-decoration: none;
-      font-family: 'Jost', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 500;
-      padding: 0.9rem 2rem;
-      border-radius: 3px;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      transition: background 0.2s, transform 0.15s;
-    }
-
-    .btn-primary:hover { background: #8a4d5a; transform: translateY(-1px); }
-
-    .btn-secondary {
-      display: inline-block;
-      background: transparent;
-      color: var(--espresso);
-      text-decoration: none;
-      font-family: 'Jost', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 500;
-      padding: 0.9rem 2rem;
-      border-radius: 3px;
-      border: 1.5px solid var(--taupe);
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      transition: background 0.2s, color 0.2s, border-color 0.2s;
-    }
-
-    .btn-secondary:hover { background: var(--espresso); color: #fff; border-color: var(--espresso); }
-
-    /* ── SOCIAL PROOF BAR ── */
-    .proof-bar {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 1.25rem 2rem;
-      text-align: center;
-      font-size: 0.8rem;
-      letter-spacing: 0.05em;
-      color: var(--muted);
-      text-transform: uppercase;
-      font-weight: 500;
-    }
-
-    /* ── SECTION BASE ── */
-    section { padding: 5rem 2rem; }
-    @media (max-width: 680px) { section { padding: 3rem 1.5rem; } }
-
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    .section-label {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--dusty-rose);
-      margin-bottom: 0.75rem;
-    }
-
-    .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 3.5vw, 2.8rem);
-      font-weight: 300;
-      color: var(--espresso);
-      line-height: 1.2;
-      margin-bottom: 1.25rem;
-    }
-
-    .section-body {
-      font-size: 1rem;
-      color: var(--muted);
-      line-height: 1.8;
-      max-width: 580px;
-    }
-
-    /* ── PROBLEM ── */
-    .problem {
-      background: var(--espresso);
-      color: #fff;
-    }
-
-    .problem .section-label { color: var(--dusty-rose); }
-
-    .problem .section-title { color: #fff; }
-
-    .problem-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem 2rem;
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 640px) { .problem-grid { grid-template-columns: 1fr; gap: 0; } }
-
-    .problem-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 8px;
-      padding: 1.75rem;
-    }
-
-    .problem-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: #fff;
-      margin-bottom: 0.75rem;
-    }
-
-    .problem-card p {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.6);
-      line-height: 1.7;
-    }
-
-    /* ── HOW IT WORKS ── */
-    .how-it-works { background: var(--warm-white); }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2.5rem;
-      margin-top: 3rem;
-    }
-
-    @media (max-width: 720px) { .steps { grid-template-columns: 1fr; } }
-
-    .step {
-      position: relative;
-      padding-top: 0.5rem;
-    }
-
-    .step-number {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.5rem;
-      font-weight: 300;
-      color: var(--blush);
-      line-height: 1;
-      margin-bottom: 1rem;
-    }
-
-    .step h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--espresso);
-      margin-bottom: 0.6rem;
-    }
-
-    .step p {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    /* ── WHAT YOU GET ── */
-    .what-you-get { background: var(--cream); }
-
-    .report-preview {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-      margin-top: 3rem;
-    }
-
-    @media (max-width: 680px) { .report-preview { grid-template-columns: 1fr; } }
-
-    .report-mockup {
-      background: var(--warm-white);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 2rem;
-      box-shadow: 0 8px 32px rgba(60, 46, 48, 0.08);
-    }
-
-    .report-mockup-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
-      color: var(--espresso);
-      margin-bottom: 0.3rem;
-    }
-
-    .report-mockup-sub {
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .report-section {
-      margin-bottom: 1rem;
-    }
-
-    .report-section-label {
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--deep-rose);
-      margin-bottom: 0.35rem;
-    }
-
-    .report-section-line {
-      height: 8px;
-      background: var(--border);
-      border-radius: 4px;
-      margin-bottom: 0.25rem;
-    }
-
-    .report-section-line.short { width: 65%; }
-    .report-section-line.medium { width: 85%; }
-    .report-section-line.long { width: 100%; }
-
-    .deliverables {
-      list-style: none;
-    }
-
-    .deliverables li {
-      display: flex;
-      gap: 0.75rem;
-      align-items: flex-start;
-      margin-bottom: 1.1rem;
-      font-size: 0.95rem;
-      color: var(--text);
-      line-height: 1.5;
-    }
-
-    .deliverables li::before {
-      content: '';
-      width: 18px;
-      height: 18px;
-      min-width: 18px;
-      border-radius: 50%;
-      background: var(--blush);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 2px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'%3E%3Cpath d='M1 4l2.5 2.5L9 1' stroke='%239E5C6B' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    /* ── PRICING ── */
-    .pricing { background: var(--warm-white); }
-
-    .pricing-cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    @media (max-width: 640px) { .pricing-cards { grid-template-columns: 1fr; } }
-
-    .pricing-card {
-      background: var(--cream);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 2.25rem;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .pricing-card .pricing-features { flex: 1; }
-
-    .pricing-card.featured {
-      background: var(--espresso);
-      border-color: var(--espresso);
-      color: #fff;
-    }
-
-    .pricing-tag {
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--deep-rose);
-      margin-bottom: 0.75rem;
-    }
-
-    .pricing-card.featured .pricing-tag { color: var(--dusty-rose); }
-
-    .pricing-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
-      font-weight: 400;
-      color: var(--espresso);
-      margin-bottom: 0.5rem;
-    }
-
-    .pricing-card.featured h3 { color: #fff; }
-
-    .pricing-price {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.75rem;
-      font-weight: 300;
-      color: var(--espresso);
-      line-height: 1;
-      margin-bottom: 0.35rem;
-    }
-
-    .pricing-card.featured .pricing-price { color: #fff; }
-
-    .pricing-desc {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border);
-      line-height: 1.6;
-    }
-
-    .pricing-card.featured .pricing-desc {
-      color: rgba(255,255,255,0.6);
-      border-bottom-color: rgba(255,255,255,0.12);
-    }
-
-    .pricing-features {
-      list-style: none;
-      margin-bottom: 1.75rem;
-    }
-
-    .pricing-features li {
-      font-size: 0.88rem;
-      color: var(--text);
-      padding: 0.4rem 0;
-      display: flex;
-      gap: 0.6rem;
-      align-items: flex-start;
-      line-height: 1.4;
-    }
-
-    .pricing-card.featured .pricing-features li { color: rgba(255,255,255,0.85); }
-
-    .pricing-features li span.check {
-      color: var(--deep-rose);
-      font-size: 0.9rem;
-      margin-top: 1px;
-    }
-
-    .pricing-card.featured .pricing-features li span.check { color: var(--dusty-rose); }
-
-    .btn-pricing {
-      display: block;
-      text-align: center;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      padding: 0.8rem 1.5rem;
-      border-radius: 4px;
-      letter-spacing: 0.02em;
-      transition: all 0.2s;
-    }
-
-    .btn-pricing-dark {
-      background: var(--espresso);
-      color: #fff;
-      font-family: 'Jost', sans-serif;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-    }
-
-    .btn-pricing-dark:hover { background: var(--deep-rose); }
-
-    .btn-pricing-light {
-      background: var(--deep-rose);
-      color: #fff;
-      font-family: 'Jost', sans-serif;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-    }
-
-    .btn-pricing-light:hover { background: #8a4d5a; }
-
-    /* ── TESTIMONIAL ── */
-    .testimonial-section {
-      background: var(--blush);
-      color: var(--espresso);
-    }
-
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    @media (max-width: 720px) { .testimonial-grid { grid-template-columns: 1fr; } }
-
-    .testimonial {
-      background: rgba(255,255,255,0.5);
-      border-radius: 8px;
-      padding: 1.75rem;
-      border: 1px solid var(--border);
-    }
-
-    .testimonial blockquote {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-style: italic;
-      line-height: 1.65;
-      color: var(--espresso);
-      margin-bottom: 1.25rem;
-    }
-
-    .testimonial cite {
-      font-size: 0.78rem;
-      font-style: normal;
-      color: var(--muted);
-      font-weight: 500;
-      letter-spacing: 0.04em;
-    }
-
-    /* ── ABOUT ── */
-    .about { background: var(--cream); }
-
-    .about-inner {
-      display: grid;
-      grid-template-columns: 1.6fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    @media (max-width: 680px) {
-      .about-inner { grid-template-columns: 1fr; }
-      .about-avatar { max-width: 260px; margin: 0 auto; }
-    }
-
-    .about-avatar {
-      aspect-ratio: 3/4;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .about-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-    }
-
-    .about p {
-      font-size: 0.95rem;
-      color: var(--muted);
-      line-height: 1.8;
-      margin-bottom: 1rem;
-    }
-
-    /* ── CTA / BOOK ── */
-    .book-cta {
-      background: var(--espresso);
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-
-    .book-cta .section-label { color: var(--dusty-rose); margin-bottom: 1rem; }
-
-    .book-cta .section-title { color: #fff; max-width: 600px; margin: 0 auto 1rem; }
-
-    .book-cta p {
-      color: rgba(255,255,255,0.55);
-      font-size: 1rem;
-      max-width: 480px;
-      margin: 0 auto 1.75rem;
-      line-height: 1.7;
-    }
-
-    .btn-large {
-      display: inline-block;
-      background: var(--deep-rose);
-      color: #fff;
-      text-decoration: none;
-      font-family: 'Jost', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 500;
-      padding: 1rem 2.75rem;
-      border-radius: 3px;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      transition: background 0.2s, transform 0.15s;
-    }
-
-    .btn-large:hover { background: #8a4d5a; transform: translateY(-1px); }
-
-    .book-subtext {
-      margin-top: 1.5rem !important;
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.35);
-    }
-
-    .book-subtext a {
-      color: var(--dusty-rose);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: color 0.2s, border-color 0.2s;
-    }
-
-    .book-subtext a:hover { color: #fff; border-bottom-color: rgba(255,255,255,0.4); }
-    .book-subtext a:active { color: var(--deep-rose); }
-    .book-subtext a:focus-visible { outline: 2px solid var(--dusty-rose); outline-offset: 3px; border-radius: 2px; }
-
-    /* ── FAQ ── */
-    .faq { background: var(--warm-white); }
-
-    .faq-list {
-      margin-top: 3rem;
-      max-width: 680px;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-      padding: 1.5rem 0;
-    }
-
-    .faq-item:first-child { padding-top: 0; }
-    .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
-
-    .faq-q {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--espresso);
-      margin-bottom: 0.6rem;
-    }
-
-    .faq-a {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--espresso);
-      color: rgba(255,255,255,0.4);
-      text-align: center;
-      padding: 3.5rem 2rem;
-      font-size: 0.82rem;
-      line-height: 2;
-    }
-
-    footer a {
-      color: rgba(255,255,255,0.5);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: color 0.2s, border-color 0.2s;
-    }
-
-    footer a:hover { color: var(--dusty-rose); border-bottom-color: var(--dusty-rose); }
-    footer a:active { color: var(--deep-rose); }
-    footer a:focus-visible { outline: 2px solid var(--dusty-rose); outline-offset: 3px; border-radius: 2px; }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5KGVDWX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- NAV -->
   <nav>
@@ -749,10 +66,10 @@
   <section class="problem">
     <div class="container">
       <p class="section-label">The Problem</p>
-      <h2 class="section-title" style="max-width:560px;">
+      <h2 class="section-title">
         You're running a household that no one<br>ever hired you to run.
       </h2>
-      <p class="section-body" style="color:rgba(255,255,255,0.6);">
+      <p class="section-body">
         The tools that exist (shared calendars, grocery apps, whiteboards) were built for individuals.
         They don't adapt to your family's rhythms. They don't reduce the weight you're carrying. They just move it somewhere digital.
       </p>
@@ -841,7 +158,7 @@
         </div>
         <!-- list -->
         <div>
-          <p style="font-size:0.95rem; color:var(--muted); line-height:1.8; margin-bottom:1.5rem;">
+          <p class="report-intro">
             Most parents describe reading it as the first time anyone has clearly seen what they're managing.
           </p>
           <ul class="deliverables">
@@ -870,7 +187,7 @@
           <div class="pricing-tag">Most popular</div>
           <h3>The Family Brief</h3>
           <div class="pricing-price">$75</div>
-          <p style="font-size:0.7rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--dusty-rose); margin-bottom:1rem;">Introductory pricing</p>
+          <p class="pricing-intro-label">Introductory pricing</p>
           <p class="pricing-desc">One 45-minute conversation. A personalized report delivered within 48 hours. Everything you need to finally see your household clearly.</p>
           <ul class="pricing-features">
             <li><span class="check">✓</span> 45-minute Zoom conversation</li>
@@ -884,7 +201,7 @@
         <div class="pricing-card">
           <div class="pricing-tag">Coming soon</div>
           <h3>Family Dashboard</h3>
-          <div class="pricing-price" style="color:var(--muted);">$25<span style="font-size:1rem;font-weight:400;">/mo</span></div>
+          <div class="pricing-price">$25<span class="pricing-price-period">/mo</span></div>
           <p class="pricing-desc">A dashboard built specifically for your family, based on your Brief. After-school pickups, meals, deadlines. Already shaped around your life before you log in.</p>
           <ul class="pricing-features">
             <li><span class="check">✓</span> Built around your Brief findings</li>
@@ -922,17 +239,17 @@
   </section>
 
   <!-- WHO IT'S FOR -->
-  <section style="background:var(--cream); padding:5rem 2rem;">
+  <section class="who-its-for">
     <div class="container">
       <p class="section-label">Is This For You?</p>
       <h2 class="section-title">Built for the parent who's<br>holding it all together.</h2>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem 3rem; margin-top:2.5rem; max-width:680px;">
-        <div style="font-size:0.95rem; color:var(--text); padding:0.6rem 0; border-top:1px solid var(--border);">You're the one holding the household together, whether or not you work outside it</div>
-        <div style="font-size:0.95rem; color:var(--text); padding:0.6rem 0; border-top:1px solid var(--border);">Your partner wants to help but doesn't really know what's going on</div>
-        <div style="font-size:0.95rem; color:var(--text); padding:0.6rem 0; border-top:1px solid var(--border);">You have kids with real schedules and real logistics</div>
-        <div style="font-size:0.95rem; color:var(--text); padding:0.6rem 0; border-top:1px solid var(--border);">You've tried the apps and none of them stuck</div>
-        <div style="font-size:0.95rem; color:var(--text); padding:0.6rem 0; border-top:1px solid var(--border);">You want something that just works without you having to build it</div>
-        <div style="font-size:0.95rem; color:var(--text); padding:0.6rem 0; border-top:1px solid var(--border);">You'd pay for real clarity if someone could actually give it to you</div>
+      <div class="who-its-for-grid">
+        <div class="who-its-for-item">You're the one holding the household together, whether or not you work outside it</div>
+        <div class="who-its-for-item">Your partner wants to help but doesn't really know what's going on</div>
+        <div class="who-its-for-item">You have kids with real schedules and real logistics</div>
+        <div class="who-its-for-item">You've tried the apps and none of them stuck</div>
+        <div class="who-its-for-item">You want something that just works without you having to build it</div>
+        <div class="who-its-for-item">You'd pay for real clarity if someone could actually give it to you</div>
       </div>
     </div>
   </section>
@@ -943,7 +260,7 @@
       <div class="about-inner">
         <div>
           <p class="section-label">About Sarah</p>
-          <h2 class="section-title" style="font-size:1.75rem;">I built this because I needed it.</h2>
+          <h2 class="section-title">I built this because I needed it.</h2>
           <p>I'm a software engineer who spent years at Resy building products for people who are short on time and high on expectations. I know what it takes to build something people actually use under pressure.</p>
           <p>I also live this problem. I'm the one holding the mental load. I've tried every tool out there and none of them removed the weight. They just moved it somewhere else. I'm building what I would have paid for three years ago.</p>
           <p>Your Family Brief starts with listening. Because before you can fix anything, someone has to actually see it.</p>
@@ -998,8 +315,8 @@
 
   <!-- FOOTER -->
   <footer>
-    <p style="margin-bottom:0.5rem;">
-      <strong style="color:rgba(255,255,255,0.7);">Your Family Brief</strong>
+    <p class="footer-brand">
+      <strong class="footer-brand-name">Your Family Brief</strong>
     </p>
     <p>
       <a href="mailto:admin@yourfamilybrief.com">admin@yourfamilybrief.com</a>
