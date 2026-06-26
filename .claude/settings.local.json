@@ -25,7 +25,13 @@
       "Bash(grep -E \"color|font|#[0-9A-Fa-f]{3,6}\" \"/Users/sarahshowers/Documents/Claude/workspaces/blue-sky/Project Blue Sky/index.html\")",
       "mcp__9a131854-883e-43f1-8a1f-9bd568c922bd__search_threads",
       "mcp__9a131854-883e-43f1-8a1f-9bd568c922bd__get_thread",
-      "mcp__75cbe95a-e2de-4292-87b1-bd50ba9c10c9__notion-create-pages"
+      "mcp__75cbe95a-e2de-4292-87b1-bd50ba9c10c9__notion-create-pages",
+      "Bash(git *)",
+      "Bash(gh auth *)",
+      "Bash(gh repo *)",
+      "Bash(GIT_TRACE=1 git -C \"/Users/sarahshowers/Documents/Claude/workspaces/blue-sky/Project Blue Sky\" push origin main)",
+      "Bash(brew install *)",
+      "Bash(/opt/homebrew/bin/git *)"
     ]
   }
 }
