@@ -1,0 +1,128 @@
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1.25rem 4rem;
+  line-height: inherit;
+}
+
+.wordmark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--espresso);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.35rem;
+  text-align: center;
+}
+
+.wordmark span { color: var(--deep-rose); }
+
+.tagline {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+
+.divider {
+  width: 32px;
+  height: 1px;
+  background: var(--border);
+  margin: 0 auto 2.75rem;
+}
+
+.links {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.link-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.link-btn:hover { transform: translateY(-1px); }
+.link-btn:active { transform: translateY(0); }
+
+.link-btn--primary {
+  background: var(--deep-rose);
+  color: #fff;
+  border: 1.5px solid var(--deep-rose);
+}
+
+.link-btn--primary:hover { background: #8a4d5a; border-color: #8a4d5a; }
+
+.link-btn--outline {
+  background: transparent;
+  color: var(--espresso);
+  border: 1.5px solid var(--taupe);
+}
+
+.link-btn--outline:hover {
+  background: var(--espresso);
+  color: #fff;
+  border-color: var(--espresso);
+}
+
+.socials {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.social-link {
+  color: var(--taupe);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.social-link:hover { color: var(--deep-rose); }
+
+.social-label {
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  margin-left: 0.35rem;
+}
+
+footer {
+  margin-top: auto;
+  padding-top: 3rem;
+  padding-bottom: 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: center;
+  letter-spacing: 0.03em;
+  background: transparent;
+  line-height: inherit;
+  border-top: none;
+}
+
+footer a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+footer a:hover { color: var(--deep-rose); border-bottom-color: var(--dusty-rose); }
