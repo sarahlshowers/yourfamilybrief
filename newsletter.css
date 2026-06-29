@@ -1,0 +1,142 @@
+body { min-height: 100vh; }
+
+.nav-logo { text-decoration: none; }
+.nav-link.active { color: var(--espresso); font-weight: 500; }
+
+/* ── Header ── */
+.nl-header {
+  padding: 3.5rem 3rem 2.5rem;
+  max-width: 680px;
+}
+
+.nl-kicker {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dusty-rose);
+  margin-bottom: 0.75rem;
+}
+
+.nl-header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 300;
+  font-style: normal;
+  color: var(--espresso);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.nl-header h1 em {
+  font-style: italic;
+  color: var(--deep-rose);
+}
+
+.nl-sub {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+/* ── Embed ── */
+.nl-embed-wrap {
+  padding: 0 3rem 3rem;
+  max-width: 640px;
+}
+
+.nl-embed-fallback {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.nl-embed-fallback a {
+  color: var(--deep-rose);
+  text-decoration: none;
+}
+
+.nl-embed-fallback a:hover { text-decoration: underline; }
+
+/* ── Past Issues ── */
+.nl-issues-wrap {
+  border-top: 1px solid var(--border);
+  padding: 3rem 3rem 5rem;
+  max-width: 800px;
+}
+
+.section-label-sm {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.75rem;
+}
+
+.nl-issue-list { display: flex; flex-direction: column; }
+
+.nl-issue {
+  display: grid;
+  grid-template-columns: 90px 1fr 24px;
+  gap: 0 2rem;
+  align-items: start;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.15s;
+}
+
+.nl-issue:last-child { border-bottom: none; }
+.nl-issue:hover { opacity: 0.72; }
+
+.nl-issue-meta { padding-top: 3px; }
+
+.nl-issue-date {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.nl-issue-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--espresso);
+  margin-bottom: 6px;
+}
+
+.nl-issue-excerpt {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.nl-issue-arrow {
+  font-size: 1rem;
+  color: var(--dusty-rose);
+  padding-top: 4px;
+  align-self: center;
+}
+
+/* ── Empty state ── */
+.nl-empty {
+  padding: 2.5rem 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .nl-header,
+  .nl-embed-wrap,
+  .nl-issues-wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
+
+  .nl-issue { grid-template-columns: 1fr 20px; gap: 0 1rem; }
+  .nl-issue-meta { display: none; }
+}
