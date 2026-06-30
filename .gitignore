@@ -18,6 +18,7 @@ reports/
 
 # Generated binary assets — track source scripts, not outputs
 *.pdf
+!downloads/*.pdf
 *.docx
 *.xlsx
 og-image.png
