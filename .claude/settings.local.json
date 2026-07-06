@@ -32,7 +32,10 @@
       "Bash(GIT_TRACE=1 git -C \"/Users/sarahshowers/Documents/Claude/workspaces/blue-sky/Project Blue Sky\" push origin main)",
       "Bash(brew install *)",
       "Bash(/opt/homebrew/bin/git *)",
-      "Skill(claude-in-chrome)"
+      "Skill(claude-in-chrome)",
+      "Bash(vercel --version)",
+      "Bash(code *)",
+      "Bash(open *)"
     ]
   }
 }

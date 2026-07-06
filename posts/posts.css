@@ -103,6 +103,17 @@ body { min-height: 100vh; }
 
 .post-body { padding: 0 0 4rem; }
 
+.post-body a {
+  color: var(--deep-rose);
+  text-decoration: none;
+  border-bottom: 1px solid var(--blush);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.post-body a:hover { border-bottom-color: var(--deep-rose); }
+.post-body a:active { color: #8a4d5a; }
+.post-body a:focus-visible { outline: 2px solid var(--dusty-rose); outline-offset: 3px; border-radius: 2px; }
+
 .post-body p {
   font-size: 1rem;
   line-height: 1.85;
@@ -118,6 +129,24 @@ body { min-height: 100vh; }
   color: var(--espresso);
   margin: 2.5rem 0 0.75rem;
   line-height: 1.2;
+}
+
+.post-body ul {
+  margin: 0 0 1.4rem 1.25rem;
+  padding: 0;
+}
+
+.post-body ul li {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--espresso);
+  opacity: 0.85;
+  margin-bottom: 0.4rem;
+  padding-left: 0.25rem;
+}
+
+.post-body ul li::marker {
+  color: var(--deep-rose);
 }
 
 .post-body h3 {
@@ -151,7 +180,11 @@ blockquote p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
+  transition: opacity 0.15s;
 }
+
+a.post-footer:hover { opacity: 0.7; }
 
 .next-label {
   font-size: 0.65rem;
