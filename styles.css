@@ -35,7 +35,13 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  min-height: 64px;
+}
+
+@media (max-width: 560px) {
+  nav { padding: 0 1.25rem; min-height: 56px; }
+  .nav-link { display: none; }
+  .nav-cta { font-size: 0.72rem; padding: 0.4rem 0.9rem; letter-spacing: 0.04em; }
 }
 
 .nav-logo {
