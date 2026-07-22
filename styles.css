@@ -724,6 +724,26 @@ section { padding: 5rem 2rem; }
   line-height: 1.7;
 }
 
+/* ── BRAIN-DUMP CTA ── */
+.brain-dump-cta {
+  background: var(--cream);
+  text-align: center;
+}
+
+.brain-dump-cta .section-title { max-width: 600px; margin: 0 auto 1rem; }
+.brain-dump-cta .section-title em { font-style: italic; color: var(--deep-rose); }
+
+.bd-home-embed {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.bd-home-fineprint {
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  color: var(--muted-light);
+}
+
 /* ── FOOTER ── */
 footer {
   background: var(--espresso);

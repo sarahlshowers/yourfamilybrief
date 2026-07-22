@@ -1,0 +1,80 @@
+html, body { height: 100%; }
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+.bd-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.bd-content {
+  max-width: 640px;
+  width: 100%;
+  text-align: center;
+}
+
+.bd-kicker {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dusty-rose);
+  margin-bottom: 1.25rem;
+}
+
+.bd-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.1rem, 5vw, 3rem);
+  font-weight: 400;
+  color: var(--espresso);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.bd-content h1 em {
+  font-style: italic;
+  color: var(--deep-rose);
+}
+
+.bd-sub {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 480px;
+  margin: 0 auto 2.5rem;
+}
+
+.bd-embed-wrap {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.bd-embed-fallback {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.bd-embed-fallback a {
+  color: var(--deep-rose);
+  text-decoration: none;
+}
+
+.bd-embed-fallback a:hover { text-decoration: underline; }
+
+.bd-fineprint {
+  margin-top: 1.5rem;
+  font-size: 0.78rem;
+  color: var(--muted-light);
+}
+
+@media (max-width: 640px) {
+  .bd-wrap { padding: 3rem 1.5rem; }
+}

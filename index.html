@@ -8,6 +8,23 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-P5KGVDWX');</script>
   <!-- End Google Tag Manager -->
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '946195037753041');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=946195037753041&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Family Brief — Finally, someone who sees it all</title>
@@ -38,7 +55,7 @@
     <div class="nav-logo">Your Family<span> Brief</span></div>
     <div class="nav-links">
       <a class="nav-link" href="blog.html">Blog</a>
-      <a class="nav-link" href="newsletter.html">Newsletter</a>
+      <a class="nav-link" href="newsletter.html">Free Brain-Dump</a>
       <a class="nav-cta" data-gtm="book-now" href="https://calendly.com/yourfamilybrief/new-meeting" target="_blank" rel="noopener">Book a Call</a>
     </div>
   </nav>
@@ -314,6 +331,22 @@
     </p>
   </section>
 
+  <!-- FREE BRAIN-DUMP OPT-IN -->
+  <section class="brain-dump-cta">
+    <div class="container">
+      <p class="section-label">Free Worksheet</p>
+      <h2 class="section-title">Get the mental load out of your <em>head</em>.</h2>
+      <p class="section-body" style="margin:0 auto 2rem;">
+        Grab the free Mental Load Brain-Dump. Fifteen minutes, once, and the invisible list is
+        finally on paper instead of in your head. You'll also get the weekly note and the full resource library.
+      </p>
+      <div class="bd-home-embed">
+        <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="8bc8006f-4a3b-4ea2-9b8f-31759fb04a67"></script>
+      </div>
+      <p class="bd-home-fineprint">No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
     <p class="footer-brand">
@@ -328,5 +361,6 @@
     </p>
   </footer>
 
+  <script src="utm.js"></script>
 </body>
 </html>

@@ -59,6 +59,12 @@ body { min-height: 100vh; }
 
 .nl-embed-fallback a:hover { text-decoration: underline; }
 
+.nl-fineprint {
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  color: var(--muted-light);
+}
+
 /* ── Past Issues ── */
 .nl-issues-wrap {
   border-top: 1px solid var(--border);
