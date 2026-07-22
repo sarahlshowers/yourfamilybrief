@@ -1,0 +1,89 @@
+html, body { height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem 3rem;
+}
+
+.book-page {
+  max-width: 640px;
+  width: 100%;
+  text-align: center;
+}
+
+.book-wordmark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--espresso);
+  margin-bottom: 2.5rem;
+}
+
+.book-wordmark span { color: var(--deep-rose); }
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dusty-rose);
+  margin-bottom: 1rem;
+}
+
+.book-page h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 400;
+  color: var(--espresso);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.book-sub {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 480px;
+  margin: 0 auto 2.5rem;
+}
+
+.book-testimonial {
+  background: var(--blush);
+  border-radius: 10px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.book-testimonial blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--espresso);
+  margin-bottom: 0.75rem;
+}
+
+.book-testimonial cite {
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.calendly-inline-widget {
+  min-height: 630px;
+}
+
+@media (max-width: 560px) {
+  main { padding: 2.5rem 1.25rem 2rem; }
+  .book-testimonial { padding: 1.5rem 1.5rem; }
+  .calendly-inline-widget { min-height: 700px; }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P5KGVDWX');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '946195037753041');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=946195037753041&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book your Family Brief — Your Family Brief</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="book.css" />
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5KGVDWX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <main>
+    <div class="book-page">
+      <p class="book-wordmark">Your Family<span> Brief</span></p>
+
+      <p class="label">Book your Family Brief</p>
+      <h1>Book your Family Brief.</h1>
+      <p class="book-sub">A 45-minute call, then a report written about your family within 48 hours. $75, flat. No subscription.</p>
+
+      <div class="book-testimonial">
+        <blockquote>"It named everything I'd been trying to explain for years. And then it told me what to do about it."</blockquote>
+        <cite>Mom of three</cite>
+      </div>
+
+      <div class="calendly-inline-widget" id="calendly-embed" style="min-width:320px;height:700px;"></div>
+    </div>
+  </main>
+
+  <footer>
+    Questions? Email <a href="mailto:admin@yourfamilybrief.com">admin@yourfamilybrief.com</a>
+  </footer>
+
+  <script src="utm.js"></script>
+  <script>
+    (function () {
+      var utm = window.yfbGetUTM ? window.yfbGetUTM() : {};
+
+      // ── book_now_click: arriving on /book from the ad is booking intent ──
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(Object.assign({ event: 'book_now_click' }, utm));
+
+      // ── Build the Calendly embed URL with UTMs passed through ──────────
+      var calendlyBase = 'https://calendly.com/yourfamilybrief/new-meeting';
+      var qs = new URLSearchParams(utm).toString();
+      var calendlyUrl = qs ? calendlyBase + '?' + qs : calendlyBase;
+
+      var embed = document.getElementById('calendly-embed');
+      embed.setAttribute('data-url', calendlyUrl);
+
+      var widgetScript = document.createElement('script');
+      widgetScript.src = 'https://assets.calendly.com/assets/external/widget.js';
+      widgetScript.async = true;
+      document.body.appendChild(widgetScript);
+
+      // ── booking_confirmed: primary trigger is Calendly's inline-embed event ──
+      window.addEventListener('message', function (e) {
+        if (e.data && e.data.event === 'calendly.event_scheduled') {
+          window.dataLayer.push(Object.assign({ event: 'booking_confirmed' }, utm));
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
