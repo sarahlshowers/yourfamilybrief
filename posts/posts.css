@@ -149,6 +149,26 @@ body { min-height: 100vh; }
   color: var(--deep-rose);
 }
 
+.post-body ol {
+  margin: 0 0 1.4rem 1.25rem;
+  padding: 0;
+}
+
+.post-body ol li {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--espresso);
+  opacity: 0.85;
+  margin-bottom: 0.4rem;
+  padding-left: 0.25rem;
+}
+
+.post-body ol li::marker {
+  color: var(--deep-rose);
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+}
+
 .post-body h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.3rem;

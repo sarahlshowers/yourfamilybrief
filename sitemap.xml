@@ -16,6 +16,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://yourfamilybrief.com/posts/mental-load-examples.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yourfamilybrief.com/posts/default-parent.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yourfamilybrief.com/posts/lunchbox-decision.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yourfamilybrief.com/posts/travel-mental-load.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yourfamilybrief.com/posts/you-cant-fix-summer.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yourfamilybrief.com/posts/summer-break.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://yourfamilybrief.com/posts/what-is-mental-load.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -27,11 +57,6 @@
   </url>
   <url>
     <loc>https://yourfamilybrief.com/posts/showing-partner.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://yourfamilybrief.com/posts/summer-break.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
