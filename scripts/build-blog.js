@@ -35,7 +35,7 @@ if (posts.length === 0) {
 posts.sort((a, b) => b.date.localeCompare(a.date));
 const [latest, ...rest] = posts;
 
-const heroBlock = `  <a class="hero" href="posts/${latest.slug}.html">
+const heroBlock = `  <a class="hero" href="posts/${latest.slug}">
     <p class="hero-label">Latest</p>
     <h1>${escapeHtml(latest.title)}</h1>
     <p>${escapeHtml(latest.dek)}</p>
@@ -48,7 +48,7 @@ const heroBlock = `  <a class="hero" href="posts/${latest.slug}.html">
 
 const cards = rest
   .map(
-    (p) => `    <a class="post-card" href="posts/${p.slug}.html">
+    (p) => `    <a class="post-card" href="posts/${p.slug}">
       <div>
         <div class="post-tag">${escapeHtml(p.tag)}</div>
         <div class="post-title">${escapeHtml(p.title)}</div>
