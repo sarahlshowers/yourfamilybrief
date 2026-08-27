@@ -1,0 +1,75 @@
+html, body { height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem 3rem;
+}
+
+.reset-page {
+  max-width: 640px;
+  width: 100%;
+  text-align: center;
+}
+
+.reset-wordmark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--espresso);
+  margin-bottom: 2.5rem;
+}
+
+.reset-wordmark span { color: var(--deep-rose); }
+
+.reset-page .label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dusty-rose);
+  margin-bottom: 1rem;
+}
+
+.reset-page h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 400;
+  color: var(--espresso);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.reset-sub {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 480px;
+  margin: 0 auto 2rem;
+}
+
+.reset-badge {
+  display: inline-block;
+  background: var(--blush);
+  color: var(--deep-rose);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.65rem 1.5rem;
+  border-radius: 999px;
+  margin-bottom: 2.5rem;
+}
+
+.calendly-inline-widget {
+  min-height: 630px;
+}
+
+@media (max-width: 560px) {
+  main { padding: 2.5rem 1.25rem 2rem; }
+  .calendly-inline-widget { min-height: 700px; }
+}
