@@ -70,10 +70,13 @@
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push(Object.assign({ event: 'reset_signup_view' }, utm));
 
-      // ── Build the Calendly embed URL with UTMs passed through ──────────
+      // ── Build the Calendly embed URL, prefilled to the one available slot ──
+      // Only Mon Aug 31, 8:00pm ET is open on this event, so skip straight
+      // past the month grid instead of making visitors hunt for it.
       var calendlyBase = 'https://calendly.com/yourfamilybrief/back-to-school-systems-reset';
-      var qs = new URLSearchParams(utm).toString();
-      var calendlyUrl = qs ? calendlyBase + '?' + qs : calendlyBase;
+      var params = Object.assign({ month: '2026-08', date: '2026-08-31' }, utm);
+      var qs = new URLSearchParams(params).toString();
+      var calendlyUrl = calendlyBase + '?' + qs;
 
       var embed = document.getElementById('calendly-embed');
       embed.setAttribute('data-url', calendlyUrl);
